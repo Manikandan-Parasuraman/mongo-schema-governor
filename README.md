@@ -1,24 +1,26 @@
-# Mongo Schema Governor
+```markdown
+# 🛡️ Mongo Schema Governor
 
-A production-grade MongoDB governance tool to export latest-data-driven schemas and index definitions, with optional cross-database validation for schema drift detection and consistency enforcement.
-
----
-
-## Overview
-
-MongoDB is schema-less — but production systems are not.
-
-Mongo Schema Governor helps you:
-
-- Infer accurate schema from latest data  
-- Export index definitions  
-- Detect schema drift across environments (dev vs prod)  
-- Support safe data cleanup and migrations  
+A production-grade MongoDB governance tool designed to export latest-data-driven schemas and index definitions, featuring cross-database validation for schema drift detection and consistency enforcement.
 
 ---
 
-## Architecture
+## 📖 Overview
 
+MongoDB is schema-less — **but production systems are not.**
+
+Mongo Schema Governor bridges the gap between flexible NoSQL storage and the need for structural integrity. It allows you to:
+
+* **Infer accurate schemas** based on the latest documents (ignoring legacy data debris).
+* **Export index definitions** including TTL, Unique, and Partial indexes.
+* **Detect schema drift** between environments (e.g., Dev vs. Prod).
+* **Facilitate safe migrations** and data cleanup efforts.
+
+---
+
+## 🏗️ Architecture
+
+```text
             +----------------------+
             |   Source MongoDB     |
             | (Latest Data Only)   |
@@ -26,300 +28,211 @@ Mongo Schema Governor helps you:
                        |
                        v
             +----------------------+
-            | Schema Extractor     |
+            |   Schema Extractor   |
             | - Latest sampling    |
             | - Nested flattening  |
             +----------+-----------+
                        |
                        v
             +----------------------+
-            | Index Extractor      |
-            | - Unique             |
-            | - TTL                |
+            |   Index Extractor    |
+            | - Unique & TTL       |
             | - Partial indexes    |
             +----------+-----------+
                        |
                        v
             +----------------------+
-            | Export Engine        |
+            |    Export Engine     |
             | - JSON output        |
-            | - Logging            |
+            | - Structured Logging |
             +----------+-----------+
                        |
             +----------+-----------+
             |                      |
             v                      v
- schema_export.json     validation_report.json
+   schema_export.json     validation_report.json
                                   ^
                                   |
                       +-----------+------------+
-                      | Target MongoDB (Optional) |
+                      | Target MongoDB (Opt.)  |
                       +---------------------------+
+```
 
 ---
 
-## Features
+## ✨ Features
 
-### Core
-- Latest-data-based schema inference (avoids legacy pollution)  
-- Full index extraction  
-- Nested field detection (user.address.city)  
-- Sampling-based (high performance)  
+### 🛠️ Core
+* **Latest-Data Inference:** Specifically targets recent records to avoid legacy field pollution.
+* **Index Extraction:** Full capture of index properties (Unique, TTL, Sparse).
+* **Nested Analysis:** Automatically detects and flattens nested fields (e.g., `user.address.city`).
+* **Sampling-Based:** Optimized for performance on large-scale collections.
 
-### Validation
-- Cross-database schema comparison  
-- Type mismatch detection  
-- Missing / extra fields detection  
-- Index consistency validation  
+### 🔍 Validation
+* **Cross-DB Comparison:** Compare two databases to find inconsistencies.
+* **Type Mismatch Detection:** Alerts you if a field is an `int` in Prod but a `string` in Dev.
+* **Field Audit:** Identifies missing or extra fields across environments.
 
-### DevOps Ready
-- Dockerized  
-- `.env` driven configuration  
-- Read-only safe execution  
-- Structured logging  
+### 🚀 DevOps Ready
+* **Dockerized:** Ready for containerized workflows.
+* **Environment Driven:** Configured via `.env` files.
+* **Read-Only Safe:** Guaranteed not to mutate your production data.
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
-
+```text
 mongo-schema-governor/
-│
 ├── exporter/
-│ ├── config.py
-│ ├── logger.py
-│ ├── schema_extractor.py
-│ ├── index_extractor.py
-│ ├── exporter.py
-│ ├── validator.py
-│
-├── output/
-├── .env
-├── .env.example
-├── main.py
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
+│   ├── config.py             # Configuration logic
+│   ├── logger.py             # Structured logging setup
+│   ├── schema_extractor.py   # Schema inference engine
+│   ├── index_extractor.py    # MongoDB index logic
+│   ├── exporter.py          # Export orchestration
+│   └── validator.py         # Schema drift detection
+├── output/                   # Generated JSON reports
+├── .env                      # Environment variables
+├── .env.example              # Template for config
+├── main.py                   # Entry point
+├── Dockerfile                # Container definition
+├── docker-compose.yml        # Orchestration
+├── requirements.txt          # Python dependencies
 └── README.md
-
+```
 
 ---
 
-## Configuration
+## ⚙️ Configuration
 
-### .env (Minimum Required)
-
-
+### 1. Basic Setup (Export Only)
+Create a `.env` file in the root directory:
+```bash
 MONGO_URI=mongodb://host.docker.internal:27017
 MONGO_DB_NAME=your_source_db
+```
 
-
-### .env (With Validation)
-
-
+### 2. Validation Setup (Drift Detection)
+Add target details to your `.env`:
+```bash
 MONGO_URI=mongodb://host.docker.internal:27017
 MONGO_DB_NAME=source_db
 
 TARGET_MONGO_URI=mongodb://host.docker.internal:27017
 TARGET_DB_NAME=target_db
-
+```
 
 ---
 
-## Usage
+## 🚀 Usage
 
-### Run with Docker (Recommended)
-
-
+### Option 1: Run with Docker (Recommended)
+```bash
 docker-compose up --build
+```
 
-
-### Run Locally
-
-
+### Option 2: Run Locally
+```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Execute the governor
 python main.py
-
+```
 
 ---
 
-## Output
+## 📊 Output Examples
 
-### 1. Schema Export
-
-`output/schema_export.json`
-
-
+### 1. Schema Export (`output/schema_export.json`)
+```json
 {
-"users": {
-"schema": {
-"fields": {
-"_id": ["ObjectId"],
-"name": ["str"],
-"email": ["str"],
-"age": ["int", "NoneType"]
-},
-"mode": "latest_data"
-},
-"indexes": [
+  "users": {
+    "schema": {
+      "fields": {
+        "_id": ["ObjectId"],
+        "name": ["str"],
+        "email": ["str"],
+        "age": ["int", "NoneType"]
+      },
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "email_1",
+        "key": { "email": 1 },
+        "unique": true
+      }
+    ]
+  }
+}
+```
+
+### 2. Validation Report (`output/validation_report.json`)
+```json
 {
-"name": "email_1",
-"key": { "email": 1 },
-"unique": true
+  "users": {
+    "schema_diff": {
+      "missing_fields": ["phone"],
+      "type_mismatches": [
+        {
+          "field": "age",
+          "source": ["int"],
+          "target": ["string"]
+        }
+      ],
+      "new_fields_in_target": ["nickname"]
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  }
 }
-]
-}
-}
-
+```
 
 ---
 
-### 2. Validation Report (Optional)
+## 🧠 How It Works
 
-`output/validation_report.json`
-
-
-{
-"users": {
-"schema_diff": {
-"missing_fields": ["phone"],
-"type_mismatches": [
-{
-"field": "age",
-"source": ["int"],
-"target": ["string"]
-}
-],
-"new_fields_in_target": ["nickname"]
-},
-"index_diff": {
-"missing_indexes": [],
-"extra_indexes": []
-}
-}
-}
-
+1.  **Schema Extraction:**
+    * Prioritizes sorting by `updatedAt` → `createdAt` → `_id`.
+    * Samples the top $N$ documents to define the "current" schema.
+    * Flattens dictionaries to dot-notation for deep analysis.
+2.  **Index Extraction:**
+    * Leverages `list_indexes()` to capture full metadata.
+    * Maintains parity for Unique, Sparse, and TTL constraints.
+3.  **Safety First:**
+    * The tool only uses read operations. 
+    * Includes per-collection error isolation to prevent one corrupt collection from stopping the process.
 
 ---
 
-## How It Works
-
-### Schema Extraction
-- Detects `updatedAt` → `createdAt` → `_id`  
-- Sorts latest documents  
-- Samples recent data  
-- Flattens nested structures  
-
-### Index Extraction
-- Uses `list_indexes()`  
-- Captures:
-  - Unique  
-  - Sparse  
-  - TTL  
-  - Partial indexes  
-
-### Validation (Optional)
-
-Triggered only if:
-
-
-TARGET_MONGO_URI
-TARGET_DB_NAME
-
-
-Compares:
-- Field presence  
-- Data types  
-- Index definitions  
-
----
-
-## Safety Guarantees
-
-- No data mutation  
-- Read-only operations  
-- Fallback-safe execution  
-- Per-collection error isolation  
-
----
-
-## Performance
+## ⚡ Performance & Safety
 
 | Feature | Behavior |
-|--------|--------|
-| Large collections | Uses sampling |
-| Deep documents | Controlled depth |
-| Failures | Skips and logs |
+| :--- | :--- |
+| **Large Collections** | Uses sampling (default 1000 docs) |
+| **Deep Documents** | Controlled depth (default 5 levels) |
+| **Data Integrity** | **Read-Only**; no mutations performed |
+| **Fault Tolerance** | Skips failing collections and logs errors |
 
 ---
 
-## Advanced Configuration (Optional)
+## 🗺️ Roadmap
 
-Inside `config.py`:
-
-
-SAMPLE_SIZE = 1000
-MAX_DEPTH = 5
-TIMESTAMP_FIELDS_PRIORITY = ["updatedAt", "createdAt"]
-
+- [ ] **Auto-fix:** Optional scripts to apply missing indexes to Target.
+- [ ] **CI/CD Integration:** Fail pipelines if schema drift is detected.
+- [ ] **Alerting:** Slack/Email notifications for production drift.
+- [ ] **Versioning:** Store historical schema snapshots.
 
 ---
 
-## Use Cases
+## 🤝 Contributing
 
-- Data cleanup preparation  
-- Schema drift detection (dev vs prod)  
-- Migration validation  
-- CI/CD data checks  
-- Index audit  
-
----
-
-## Example Scenarios
-
-### Scenario 1: Export Only
-
-Only source DB configured
-
-docker-compose up
-
-
-Output:
-
-
-schema_export.json
-
-
----
-
-### Scenario 2: Export + Validate
-
-Source + target configured
-
-docker-compose up
-
-
-Output:
-
-
-schema_export.json
-validation_report.json
-
-
----
-
-## Roadmap
-
-- [ ] Auto-fix schema mismatches  
-- [ ] Index sync (apply missing indexes)  
-- [ ] CI/CD integration (fail on drift)  
-- [ ] Slack / Email alerts  
-- [ ] Schema versioning  
-
----
-
-## Contributing
-
-1. Fork the repository  
-2. Create a feature branch  
-3. Submit a pull request  
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/NewFeature`).
+3. Commit your changes (`git commit -m 'Add NewFeature'`).
+4. Push to the branch (`git push origin feature/NewFeature`).
+5. Open a Pull Request.
+```
