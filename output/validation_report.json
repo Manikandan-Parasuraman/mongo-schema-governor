@@ -1,0 +1,948 @@
+{
+  "master_sessions_logs": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_concepts": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_survey_chunks": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_ai_insights_report": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_documents": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_overall_rca_results": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_micro_pd_content_bank": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_chatbot_conversations": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_rca_best_survey_extracts": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_lesson_plan_udl": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_users": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_academic_sessions": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_domains": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_rca_best_lesson_plan_extracts": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_resources": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_pd_content_bank": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_struggling_concepts": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_survey_dashboard": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_teacher_hqim_satisfaction": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_district_student_risk_indicators": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_topics": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_survey_parse_results": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "bronze_textbook_content": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_teacher_nudges": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_district_performance": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_lesson_plan_zia": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_classes": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_student_knowledge_mastery": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_states": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_district_pd_analytics": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_district_monthly_performance": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_roles": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_district_hqim_adoption": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_district_admin_nudges": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_access_policies": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_teacher_micro_pd": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_district_tired_hqim_adoption_rate": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_per_survey_question_analytics": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_state_standards": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_schools": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "update": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_ai_insights_report_tracker": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_sessions": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_lesson_plan_bloom": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_school_monthly_performance": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_students": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "bronze_survey_responses": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_pd_content_views": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_per_survey_analytics": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_school_tired_hqim_adoption_rate": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_hqim_provider": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_student_grades": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_effect_estimation_results": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_teacher_remediation": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_subjects": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_instructional_subdomains": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_lesson_plan_bda": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_pages": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_teacher_pd": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "temp_bronze_quiz_submissions": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "bronze_etl_fetcher_logs": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "bronze_quiz_submissions": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_per_school_survey_analytics": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_surveys": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_survey_analytics_to_delete": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_user_daily_token_usage": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_zia_chunks": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_etl_logs": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_lesson_plan_zia_framework_evidences": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_teachers": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_remediation_material_bank": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_chatbot_messages": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_lesson_plan_blooms_taxonomy": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_lesson_plan_udl": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_district_configurations": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_udl_chunks": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_class_documents": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_class_tired_hqim_adoption_rate": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_bda_chunks": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_district_subject_wise_analytics": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_disitrict_lms_usage_analytics": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_quizzes": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "gold_class_performance": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_districts": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "master_courses": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  },
+  "silver_state_standards_alignment": {
+    "schema_diff": {
+      "missing_fields": [],
+      "type_mismatches": [],
+      "new_fields_in_target": []
+    },
+    "index_diff": {
+      "missing_indexes": [],
+      "extra_indexes": []
+    }
+  }
+}

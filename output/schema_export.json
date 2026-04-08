@@ -1,0 +1,7429 @@
+{
+  "master_sessions_logs": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "session_id": [
+          "str"
+        ],
+        "user_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "expires_at": [
+          "datetime"
+        ],
+        "device_info": [
+          "str"
+        ],
+        "request_info.method": [
+          "str"
+        ],
+        "request_info.url": [
+          "str"
+        ],
+        "request_info.path": [
+          "str"
+        ],
+        "request_info.ip": [
+          "str"
+        ],
+        "request_info.port": [
+          "int"
+        ],
+        "request_info.browser": [
+          "str"
+        ],
+        "request_info.browserVersion": [
+          "str"
+        ],
+        "request_info.os": [
+          "str"
+        ],
+        "request_info.osVersion": [
+          "str"
+        ],
+        "request_info.device": [
+          "str"
+        ],
+        "request_info.isMobile": [
+          "bool"
+        ],
+        "request_info.isTablet": [
+          "bool"
+        ],
+        "request_info.isPC": [
+          "bool"
+        ],
+        "request_info.isBot": [
+          "bool"
+        ],
+        "request_info.at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 144,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_concepts": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "node_name": [
+          "str"
+        ],
+        "node_id": [
+          "str"
+        ],
+        "subject_id": [
+          "ObjectId"
+        ],
+        "subject_name": [
+          "str"
+        ],
+        "concept_grade": [
+          "str"
+        ]
+      },
+      "sampled_documents": 64,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_survey_chunks": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "grade": [
+          "str"
+        ],
+        "starts_at": [
+          "datetime"
+        ],
+        "ends_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "summaries": [
+          "str"
+        ],
+        "parsed_responses": [
+          "list"
+        ]
+      },
+      "sampled_documents": 34,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_ai_insights_report": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "report.head.date": [
+          "datetime"
+        ],
+        "report.head.sources": [
+          "list"
+        ],
+        "report.head.duration": [
+          "str"
+        ],
+        "report.summary.text": [
+          "str"
+        ],
+        "report.themes": [
+          "list"
+        ],
+        "report.charts.hqim_trend": [
+          "str"
+        ],
+        "report.charts.hqim_adoption": [
+          "NoneType"
+        ],
+        "report.charts.teacher_satisfaction_trend": [
+          "NoneType"
+        ],
+        "report.charts.quiz_avg_score": [
+          "str"
+        ],
+        "report.charts.quiz_below_threshold": [
+          "str"
+        ],
+        "report.recommendations.title": [
+          "str"
+        ],
+        "report.recommendations.icon_path": [
+          "str"
+        ],
+        "report.recommendations.recommendations": [
+          "list"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 2,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_documents": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "name": [
+          "str"
+        ],
+        "type": [
+          "str"
+        ],
+        "size": [
+          "int"
+        ],
+        "gcs_link": [
+          "str"
+        ],
+        "class_id": [
+          "NoneType",
+          "ObjectId"
+        ],
+        "state_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "title": [
+          "str"
+        ],
+        "description": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "is_processed": [
+          "bool"
+        ],
+        "metadata.start_date": [
+          "datetime"
+        ],
+        "metadata.end_date": [
+          "datetime"
+        ],
+        "metadata.subject": [
+          "str"
+        ],
+        "metadata.grade": [
+          "str"
+        ],
+        "metadata.pages": [
+          "int"
+        ],
+        "metadata.type": [
+          "str"
+        ],
+        "metadata.rows": [
+          "int"
+        ],
+        "error_message": [
+          "str"
+        ],
+        "processed_at": [
+          "datetime"
+        ],
+        "processing_status": [
+          "str"
+        ],
+        "metadata.linked_district_lesson_plan_id": [
+          "ObjectId"
+        ],
+        "hqim_status": [
+          "str"
+        ],
+        "pdf_hash": [
+          "str"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_overall_rca_results": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "class_id": [
+          "ObjectId"
+        ],
+        "concept_id": [
+          "NoneType",
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "starts_at": [
+          "datetime"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "analysis": [
+          "str"
+        ],
+        "verdicts.summary": [
+          "str"
+        ],
+        "verdicts.data_sufficient": [
+          "bool"
+        ],
+        "verdicts.recommendations": [
+          "list"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_micro_pd_content_bank": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "title": [
+          "str"
+        ],
+        "description": [
+          "str"
+        ],
+        "pd_type": [
+          "str"
+        ],
+        "view_count": [
+          "int"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "last_updated": [
+          "datetime"
+        ],
+        "details.url": [
+          "str"
+        ],
+        "details.file_type": [
+          "str"
+        ],
+        "details.duration.hours": [
+          "Int64"
+        ],
+        "details.duration.minutes": [
+          "Int64"
+        ],
+        "details.duration.seconds": [
+          "Int64"
+        ],
+        "metadata.keywords": [
+          "str"
+        ],
+        "embeddings.v1.vector": [
+          "list"
+        ],
+        "embeddings.v1.dims": [
+          "int"
+        ],
+        "embeddings.v1.model": [
+          "str"
+        ],
+        "embeddings.v1.provider": [
+          "str"
+        ],
+        "overview": [
+          "str"
+        ]
+      },
+      "sampled_documents": 12,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_chatbot_conversations": {
+    "schema": {
+      "fields": {},
+      "sampled_documents": 0,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_rca_best_survey_extracts": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime",
+          "str"
+        ],
+        "best.A1": [
+          "list"
+        ],
+        "best.A2": [
+          "list"
+        ],
+        "best.A3": [
+          "list"
+        ],
+        "best.A4": [
+          "list"
+        ],
+        "best.A5": [
+          "list"
+        ],
+        "best.A6": [
+          "list"
+        ],
+        "best.A7": [
+          "list"
+        ],
+        "best.A8": [
+          "list"
+        ],
+        "best.A9": [
+          "list"
+        ],
+        "best.B1": [
+          "list"
+        ],
+        "best.B2": [
+          "list"
+        ],
+        "best.B3": [
+          "list"
+        ],
+        "best.B4": [
+          "list"
+        ],
+        "best.B5": [
+          "list"
+        ],
+        "best.C1": [
+          "list"
+        ],
+        "best.C2": [
+          "list"
+        ],
+        "best.C3": [
+          "list"
+        ],
+        "best.C4": [
+          "list"
+        ],
+        "best.D1": [
+          "list"
+        ],
+        "best.D2": [
+          "list"
+        ],
+        "best.D3": [
+          "list"
+        ],
+        "best.D4": [
+          "list"
+        ],
+        "best.E1": [
+          "list"
+        ],
+        "best.E2": [
+          "list"
+        ],
+        "best.E3": [
+          "list"
+        ],
+        "best.E4": [
+          "list"
+        ],
+        "best.E5": [
+          "list"
+        ],
+        "best.E6": [
+          "list"
+        ],
+        "best.E7": [
+          "list"
+        ],
+        "buckets": [
+          "str"
+        ],
+        "grade": [
+          "str"
+        ]
+      },
+      "sampled_documents": 199,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_lesson_plan_udl": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "class_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "document_id": [
+          "ObjectId"
+        ],
+        "results.P1.G1.principle_id": [
+          "str"
+        ],
+        "results.P1.G1.considerations": [
+          "list"
+        ],
+        "results.P2.G4.principle_id": [
+          "str"
+        ],
+        "results.P2.G4.considerations": [
+          "list"
+        ],
+        "results.P3.G7.principle_id": [
+          "str"
+        ],
+        "results.P3.G7.considerations": [
+          "list"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "results.P2.G5.principle_id": [
+          "str"
+        ],
+        "results.P2.G5.considerations": [
+          "list"
+        ],
+        "results.P4.G2.principle_id": [
+          "str"
+        ],
+        "results.P4.G2.considerations": [
+          "list"
+        ],
+        "results.P3.G8.principle_id": [
+          "str"
+        ],
+        "results.P3.G8.considerations": [
+          "list"
+        ],
+        "results.P1.G2.principle_id": [
+          "str"
+        ],
+        "results.P1.G2.considerations": [
+          "list"
+        ],
+        "results.P4.G8.principle_id": [
+          "str"
+        ],
+        "results.P4.G8.considerations": [
+          "list"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_users": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "first_name": [
+          "str"
+        ],
+        "middle_name": [
+          "str"
+        ],
+        "last_name": [
+          "str"
+        ],
+        "sis_id": [
+          "str"
+        ],
+        "email_id": [
+          "str"
+        ],
+        "role_type": [
+          "str"
+        ],
+        "lms_id": [
+          "str"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "org.type": [
+          "str"
+        ],
+        "org.sis_id": [
+          "str"
+        ],
+        "org.id": [
+          "ObjectId"
+        ],
+        "grades": [
+          "list"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "username": [
+          "str"
+        ],
+        "password": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "state_id": [
+          "ObjectId"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "ui_resources./district-admin": [
+          "list"
+        ],
+        "ui_resources./district-admin/hqim-impact-zone": [
+          "list"
+        ],
+        "ui_resources./district-admin/school-details/:id": [
+          "list"
+        ],
+        "ui_resources./district-admin/ai-insights": [
+          "list"
+        ],
+        "ui_resources./district-admin/school-insights": [
+          "list"
+        ],
+        "ui_resources./district-admin/survey-responses/:id/:userId": [
+          "list"
+        ],
+        "ui_resources./district-admin/survey-responses/:id": [
+          "list"
+        ],
+        "ui_resources./district-admin/created-surveys": [
+          "list"
+        ],
+        "ui_resources./district-admin/create-survey": [
+          "list"
+        ],
+        "ui_resources./district-admin/survey-analytics/:id": [
+          "list"
+        ],
+        "ui_resources./district-admin/per_surveys_analytics/:id": [
+          "list"
+        ],
+        "ui_resources./district-admin/resource-upload": [
+          "list"
+        ],
+        "ui_resources./district-admin/survey-analytics/question-metrics/:id": [
+          "list"
+        ],
+        "ui_resources./district-admin/district-onboarding": [
+          "list"
+        ],
+        "ui_resources./district-admin/sso-integration-center": [
+          "list"
+        ],
+        "ui_resources./district-admin/survey-dashboard-data": [
+          "list"
+        ],
+        "ui_resources./district-admin/hqim-impact-zone/school/:school_id/lms-data-insights": [
+          "list"
+        ],
+        "ui_resources./district-admin/hqim-impact-zone/school/:school_id/student-demographics": [
+          "list"
+        ],
+        "ui_resources./district-admin/hqim-impact-zone/school/:school_id/survey-analytics": [
+          "list"
+        ],
+        "ui_resources./district-admin/focus-group-dashboard": [
+          "list"
+        ],
+        "ui_resources./district-admin/lms-integration-center": [
+          "list"
+        ],
+        "ui_resources./district-admin/lms-integration-center/history": [
+          "list"
+        ],
+        "ui_resources./district-admin/change-password": [
+          "list"
+        ],
+        "ui_resources./change-password": [
+          "list"
+        ],
+        "ui_resources./district-admin/learning-performance": [
+          "list"
+        ],
+        "org.name": [
+          "str"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_academic_sessions": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "sis_id": [
+          "str"
+        ],
+        "end_date": [
+          "datetime"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "school_year": [
+          "str"
+        ],
+        "start_date": [
+          "datetime"
+        ],
+        "status": [
+          "str"
+        ],
+        "title": [
+          "str"
+        ],
+        "type": [
+          "str"
+        ]
+      },
+      "sampled_documents": 4,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_domains": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "domain": [
+          "str"
+        ],
+        "domain_id": [
+          "str"
+        ],
+        "grades": [
+          "list"
+        ],
+        "neo4j_id": [
+          "str"
+        ]
+      },
+      "sampled_documents": 11,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_rca_best_lesson_plan_extracts": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime",
+          "str"
+        ],
+        "zia.D1.S1": [
+          "list"
+        ],
+        "zia.D1.S2": [
+          "list"
+        ],
+        "zia.D1.S3": [
+          "list"
+        ],
+        "zia.D1.S4": [
+          "list"
+        ],
+        "zia.D2.S1": [
+          "list"
+        ],
+        "zia.D2.S2": [
+          "list"
+        ],
+        "zia.D2.S3": [
+          "list"
+        ],
+        "zia.D2.S4": [
+          "list"
+        ],
+        "zia.D3.S1": [
+          "list"
+        ],
+        "zia.D3.S2": [
+          "list"
+        ],
+        "zia.D3.S3": [
+          "list"
+        ],
+        "zia.D3.S4": [
+          "list"
+        ],
+        "zia.D4.S1": [
+          "list"
+        ],
+        "zia.D4.S2": [
+          "list"
+        ],
+        "zia.D4.S3": [
+          "list"
+        ],
+        "zia.D4.S4": [
+          "list"
+        ],
+        "bloom.Remember": [
+          "list"
+        ],
+        "bloom.Understand": [
+          "list"
+        ],
+        "bloom.Apply": [
+          "list"
+        ],
+        "bloom.Analyze": [
+          "list"
+        ],
+        "bloom.Evaluate": [
+          "list"
+        ],
+        "bloom.Create": [
+          "list"
+        ],
+        "udl.P3.G7.C7.1": [
+          "list"
+        ],
+        "udl.P3.G7.C7.2": [
+          "list"
+        ],
+        "udl.P3.G7.C7.3": [
+          "list"
+        ],
+        "udl.P3.G7.C7.4": [
+          "list"
+        ],
+        "udl.P3.G8.C8.1": [
+          "list"
+        ],
+        "udl.P3.G8.C8.2": [
+          "list"
+        ],
+        "udl.P3.G8.C8.3": [
+          "list"
+        ],
+        "udl.P3.G8.C8.4": [
+          "list"
+        ],
+        "udl.P3.G8.C8.5": [
+          "list"
+        ],
+        "udl.P3.G9.C9.1": [
+          "list"
+        ],
+        "udl.P3.G9.C9.2": [
+          "list"
+        ],
+        "udl.P3.G9.C9.3": [
+          "list"
+        ],
+        "udl.P3.G9.C9.4": [
+          "list"
+        ],
+        "udl.P1.G1.C1.1": [
+          "list"
+        ],
+        "udl.P1.G1.C1.2": [
+          "list"
+        ],
+        "udl.P1.G1.C1.3": [
+          "list"
+        ],
+        "udl.P1.G2.C2.1": [
+          "list"
+        ],
+        "udl.P1.G2.C2.2": [
+          "list"
+        ],
+        "udl.P1.G2.C2.3": [
+          "list"
+        ],
+        "udl.P1.G2.C2.4": [
+          "list"
+        ],
+        "udl.P1.G2.C2.5": [
+          "list"
+        ],
+        "udl.P1.G3.C3.1": [
+          "list"
+        ],
+        "udl.P1.G3.C3.2": [
+          "list"
+        ],
+        "udl.P1.G3.C3.3": [
+          "list"
+        ],
+        "udl.P1.G3.C3.4": [
+          "list"
+        ],
+        "udl.P2.G4.C4.1": [
+          "list"
+        ],
+        "udl.P2.G4.C4.2": [
+          "list"
+        ],
+        "udl.P2.G5.C5.1": [
+          "list"
+        ],
+        "udl.P2.G5.C5.2": [
+          "list"
+        ],
+        "udl.P2.G5.C5.3": [
+          "list"
+        ],
+        "udl.P2.G5.C5.4": [
+          "list"
+        ],
+        "udl.P2.G6.C6.1": [
+          "list"
+        ],
+        "udl.P2.G6.C6.2": [
+          "list"
+        ],
+        "udl.P2.G6.C6.3": [
+          "list"
+        ],
+        "udl.P2.G6.C6.4": [
+          "list"
+        ],
+        "udl.P2.G6.C6.5": [
+          "list"
+        ],
+        "grade": [
+          "str"
+        ]
+      },
+      "sampled_documents": 199,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_resources": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "resource_name": [
+          "str"
+        ],
+        "resource_type": [
+          "str"
+        ],
+        "allowed_ops": [
+          "list"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated": [
+          "list"
+        ],
+        "widgets": [
+          "list"
+        ]
+      },
+      "sampled_documents": 59,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_pd_content_bank": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "title": [
+          "str"
+        ],
+        "description": [
+          "str"
+        ],
+        "details.video_url": [
+          "str"
+        ],
+        "details.file_type": [
+          "str"
+        ],
+        "pd_type": [
+          "str"
+        ],
+        "view_count": [
+          "int"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "metadata.keyword": [
+          "str"
+        ],
+        "embeddings.v1.vector": [
+          "list"
+        ],
+        "embeddings.v1.dims": [
+          "int"
+        ],
+        "embeddings.v1.model": [
+          "str"
+        ],
+        "embeddings.v1.provider": [
+          "str"
+        ],
+        "overview": [
+          "str"
+        ]
+      },
+      "sampled_documents": 38,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_struggling_concepts": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "class_id": [
+          "ObjectId"
+        ],
+        "concepts": [
+          "list"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.grade": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ]
+      },
+      "sampled_documents": 504,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_survey_dashboard": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "summary.text": [
+          "str"
+        ],
+        "summary.metrics.total_surveys.title": [
+          "str"
+        ],
+        "summary.metrics.total_surveys.value": [
+          "int"
+        ],
+        "summary.metrics.participation_rate.title": [
+          "str"
+        ],
+        "summary.metrics.participation_rate.value": [
+          "str"
+        ],
+        "summary.metrics.positive_mentions.title": [
+          "str"
+        ],
+        "summary.metrics.positive_mentions.value": [
+          "int"
+        ],
+        "summary.metrics.areas_of_improvement.title": [
+          "str"
+        ],
+        "summary.metrics.areas_of_improvement.value": [
+          "int"
+        ],
+        "summary.metrics.actionable_feedback.title": [
+          "str"
+        ],
+        "summary.metrics.actionable_feedback.value": [
+          "int"
+        ],
+        "recommendations": [
+          "list"
+        ],
+        "themes": [
+          "list"
+        ],
+        "timeline_days": [
+          "int"
+        ],
+        "charts": [
+          "list"
+        ]
+      },
+      "sampled_documents": 12,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_teacher_hqim_satisfaction": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "school_id": [
+          "ObjectId"
+        ],
+        "teacher_user_id": [
+          "ObjectId"
+        ],
+        "survey_id": [
+          "ObjectId"
+        ],
+        "survey_response_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "positive_sentiment_count": [
+          "int"
+        ],
+        "negative_sentiment_count": [
+          "int"
+        ],
+        "is_satisfied": [
+          "bool"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_district_student_risk_indicators": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "below_proficiency": [
+          "float"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "declined_percentage": [
+          "float"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "improved_percentage": [
+          "float"
+        ],
+        "performance_drop": [
+          "float"
+        ],
+        "subject.grades": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.id": [
+          "ObjectId"
+        ],
+        "total_students": [
+          "int"
+        ]
+      },
+      "sampled_documents": 12,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_topics": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "lms_id": [
+          "str"
+        ],
+        "class.lms_id": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "NoneType"
+        ],
+        "name": [
+          "str"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 26,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_survey_parse_results": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "teacher_user_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "survey_id": [
+          "ObjectId"
+        ],
+        "survey_response_id": [
+          "ObjectId"
+        ],
+        "results": [
+          "list"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "bronze_textbook_content": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "book_details.name": [
+          "str"
+        ],
+        "book_details.edition": [
+          "str"
+        ],
+        "book_details.publisher": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.grade": [
+          "str"
+        ],
+        "status": [
+          "str"
+        ],
+        "document.gcs_link": [
+          "str"
+        ]
+      },
+      "sampled_documents": 4,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_teacher_nudges": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "teacher_user_id": [
+          "ObjectId"
+        ],
+        "class_id": [
+          "ObjectId"
+        ],
+        "content": [
+          "list"
+        ],
+        "citation": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 504,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_district_performance": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "average": [
+          "float"
+        ],
+        "outstanding": [
+          "float"
+        ],
+        "underperforming": [
+          "float"
+        ],
+        "district_id": [
+          "ObjectId"
+        ]
+      },
+      "sampled_documents": 4,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_lesson_plan_zia": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "subdomain_code": [
+          "str"
+        ],
+        "framework_code": [
+          "str"
+        ],
+        "version": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "domain_code": [
+          "str"
+        ],
+        "domain_description": [
+          "str"
+        ],
+        "domain_title": [
+          "str"
+        ],
+        "framework_name": [
+          "str"
+        ],
+        "levels.Level1.description": [
+          "str"
+        ],
+        "levels.Level2.description": [
+          "str"
+        ],
+        "levels.Level3.description": [
+          "str"
+        ],
+        "status": [
+          "str"
+        ],
+        "subdomain_description": [
+          "str"
+        ],
+        "subdomain_title": [
+          "str"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 12,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_classes": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "class_sis_id": [
+          "str"
+        ],
+        "academic_session.end_date": [
+          "datetime"
+        ],
+        "academic_session.id": [
+          "ObjectId"
+        ],
+        "academic_session.sis_id": [
+          "str"
+        ],
+        "academic_session.start_date": [
+          "datetime"
+        ],
+        "class_code": [
+          "str"
+        ],
+        "class_title": [
+          "str"
+        ],
+        "course.id": [
+          "ObjectId"
+        ],
+        "course.sis_id": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "documents": [
+          "list"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "school.id": [
+          "ObjectId"
+        ],
+        "school.name": [
+          "str"
+        ],
+        "school.sis_id": [
+          "str"
+        ],
+        "state_id": [
+          "ObjectId"
+        ],
+        "subject.grades": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.id": [
+          "ObjectId"
+        ],
+        "student_count": [
+          "int"
+        ],
+        "teacher_user_ids": [
+          "list"
+        ]
+      },
+      "sampled_documents": 504,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_student_knowledge_mastery": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "student_user_id": [
+          "ObjectId"
+        ],
+        "class_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "knowledge_states.abe2b50e-fecc-493b-af89-1c84164ab279": [
+          "float"
+        ],
+        "knowledge_states.acaa8599-2089-4f09-81fc-8cafa1c49bd8": [
+          "float"
+        ],
+        "knowledge_states.1e78ae28-7091-4c9a-a9bc-ad557a92c6f3": [
+          "float"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_states": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "state_name": [
+          "str"
+        ],
+        "state_code": [
+          "str"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 6,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_district_pd_analytics": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "teachers_enrolled": [
+          "int"
+        ],
+        "course_completed": [
+          "int"
+        ],
+        "top_performing_courses.differentiated_instruction": [
+          "int"
+        ],
+        "top_performing_courses.classroom_ai_integration": [
+          "int"
+        ],
+        "top_performing_courses.project_based_learning": [
+          "int"
+        ]
+      },
+      "sampled_documents": 1,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_district_monthly_performance": {
+    "schema": {
+      "fields": {
+        "_id.district_id": [
+          "ObjectId"
+        ],
+        "_id.month": [
+          "str"
+        ],
+        "school_count": [
+          "int"
+        ],
+        "academic_score": [
+          "float"
+        ],
+        "total_students": [
+          "int"
+        ],
+        "average": [
+          "float"
+        ],
+        "outstanding": [
+          "float"
+        ],
+        "underperforming": [
+          "float"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 8,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_roles": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "role_type": [
+          "str"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated": [
+          "list"
+        ],
+        "api_resources": [
+          "list"
+        ],
+        "ui_resources./district-admin": [
+          "list"
+        ],
+        "ui_resources./district-admin/hqim-impact-zone": [
+          "list"
+        ],
+        "ui_resources./district-admin/school-details/:id": [
+          "list"
+        ],
+        "ui_resources./district-admin/ai-insights": [
+          "list"
+        ],
+        "ui_resources./district-admin/school-insights": [
+          "list"
+        ],
+        "ui_resources./district-admin/survey-responses/:id/:userId": [
+          "list"
+        ],
+        "ui_resources./district-admin/survey-responses/:id": [
+          "list"
+        ],
+        "ui_resources./district-admin/created-surveys": [
+          "list"
+        ],
+        "ui_resources./district-admin/create-survey": [
+          "list"
+        ],
+        "ui_resources./district-admin/survey-analytics/:id": [
+          "list"
+        ],
+        "ui_resources./district-admin/per_surveys_analytics/:id": [
+          "list"
+        ],
+        "ui_resources./district-admin/resource-upload": [
+          "list"
+        ],
+        "ui_resources./district-admin/survey-analytics/question-metrics/:id": [
+          "list"
+        ],
+        "ui_resources./district-admin/district-onboarding": [
+          "list"
+        ],
+        "ui_resources./district-admin/sso-integration-center": [
+          "list"
+        ],
+        "ui_resources./district-admin/survey-dashboard-data": [
+          "list"
+        ],
+        "ui_resources./district-admin/hqim-impact-zone/school/:school_id/lms-data-insights": [
+          "list"
+        ],
+        "ui_resources./district-admin/hqim-impact-zone/school/:school_id/student-demographics": [
+          "list"
+        ],
+        "ui_resources./district-admin/hqim-impact-zone/school/:school_id/survey-analytics": [
+          "list"
+        ],
+        "ui_resources./district-admin/focus-group-dashboard": [
+          "list"
+        ],
+        "ui_resources./district-admin/lms-integration-center": [
+          "list"
+        ],
+        "ui_resources./district-admin/lms-integration-center/history": [
+          "list"
+        ],
+        "ui_resources./district-admin/lms-authorization": [
+          "list"
+        ],
+        "ui_resources./teacher": [
+          "list"
+        ],
+        "ui_resources./teacher/class-insights/:classId": [
+          "list"
+        ],
+        "ui_resources./teacher/class-statistics/:classId": [
+          "list"
+        ],
+        "ui_resources./teacher/student-insights/:classId/:studentId": [
+          "list"
+        ],
+        "ui_resources./teacher/student-selection/:classId": [
+          "list"
+        ],
+        "ui_resources./teacher/surveys": [
+          "list"
+        ],
+        "ui_resources./teacher/fill-survey/:id": [
+          "list"
+        ],
+        "ui_resources./teacher/professional-development": [
+          "list"
+        ],
+        "ui_resources./teacher/chat-assistant": [
+          "list"
+        ],
+        "ui_resources./teacher/:classId/lesson-plan-upload": [
+          "list"
+        ]
+      },
+      "sampled_documents": 3,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_district_hqim_adoption": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "overall": [
+          "int"
+        ],
+        "elementary": [
+          "int"
+        ],
+        "is_increased.percentage": [
+          "int"
+        ],
+        "is_increased.status": [
+          "bool"
+        ],
+        "created_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 299,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_district_admin_nudges": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.grade": [
+          "str"
+        ],
+        "content.nudges": [
+          "list"
+        ],
+        "content.citation": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "starts_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 12,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_access_policies": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "ptype": [
+          "str"
+        ],
+        "v0": [
+          "str"
+        ],
+        "v1": [
+          "str"
+        ],
+        "v2": [
+          "str"
+        ],
+        "v3": [
+          "str"
+        ]
+      },
+      "sampled_documents": 232,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_teacher_micro_pd": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "teacher_user_id": [
+          "ObjectId"
+        ],
+        "state_standard_id": [
+          "NoneType"
+        ],
+        "concept_id": [
+          "NoneType"
+        ],
+        "class.id": [
+          "ObjectId"
+        ],
+        "class.title": [
+          "str"
+        ],
+        "class.grade": [
+          "str"
+        ],
+        "class.subject_name": [
+          "str"
+        ],
+        "pd_type": [
+          "str"
+        ],
+        "content.issue": [
+          "str"
+        ],
+        "content.quick_strategies": [
+          "list"
+        ],
+        "content.tooltip": [
+          "str"
+        ],
+        "content.severity": [
+          "str"
+        ],
+        "content.applies_to": [
+          "list"
+        ],
+        "content.micro_pd.id": [
+          "ObjectId"
+        ],
+        "content.micro_pd.title": [
+          "str"
+        ],
+        "content.micro_pd.description": [
+          "str"
+        ],
+        "content.micro_pd.content_length": [
+          "str"
+        ],
+        "content.micro_pd.media_type": [
+          "str"
+        ],
+        "content.micro_pd.media_url": [
+          "str"
+        ],
+        "content.micro_pd.tag_line": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "teacher_feedback.is_helpful": [
+          "NoneType"
+        ],
+        "teacher_feedback.rating": [
+          "NoneType"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "is_completed": [
+          "bool"
+        ],
+        "is_accepted": [
+          "bool"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "duration.hours": [
+          "Int64"
+        ],
+        "duration.minutes": [
+          "Int64"
+        ],
+        "duration.seconds": [
+          "Int64"
+        ]
+      },
+      "sampled_documents": 26,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_district_tired_hqim_adoption_rate": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "adoption.full": [
+          "int"
+        ],
+        "adoption.partial": [
+          "int"
+        ],
+        "adoption.low": [
+          "int"
+        ],
+        "created_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 302,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_per_survey_question_analytics": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "survey_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "question_specific_charts": [
+          "list"
+        ]
+      },
+      "sampled_documents": 12,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_state_standards": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "state.id": [
+          "ObjectId"
+        ],
+        "state.name": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.grade": [
+          "str"
+        ],
+        "text": [
+          "str"
+        ]
+      },
+      "sampled_documents": 4,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_schools": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "sis_id": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "school_name": [
+          "str"
+        ],
+        "state_id": [
+          "ObjectId"
+        ],
+        "type": [
+          "str"
+        ]
+      },
+      "sampled_documents": 150,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "update": {
+    "schema": {
+      "fields": {},
+      "sampled_documents": 0,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_ai_insights_report_tracker": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "str"
+        ],
+        "state_id": [
+          "str"
+        ],
+        "duration": [
+          "int"
+        ],
+        "status": [
+          "str"
+        ],
+        "file_path": [
+          "NoneType"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 2,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_sessions": {
+    "schema": {
+      "fields": {},
+      "sampled_documents": 0,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      },
+      {
+        "name": "sessions_ttl_index",
+        "key": {
+          "expires_at": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": 0,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_lesson_plan_bloom": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "version": [
+          "str"
+        ],
+        "framework_code": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "levels.Level1.title": [
+          "str"
+        ],
+        "levels.Level1.description": [
+          "str"
+        ],
+        "levels.Level1.action_verbs": [
+          "list"
+        ],
+        "levels.Level2.title": [
+          "str"
+        ],
+        "levels.Level2.description": [
+          "str"
+        ],
+        "levels.Level2.action_verbs": [
+          "list"
+        ],
+        "levels.Level3.title": [
+          "str"
+        ],
+        "levels.Level3.description": [
+          "str"
+        ],
+        "levels.Level3.action_verbs": [
+          "list"
+        ],
+        "levels.Level4.title": [
+          "str"
+        ],
+        "levels.Level4.description": [
+          "str"
+        ],
+        "levels.Level4.action_verbs": [
+          "list"
+        ],
+        "levels.Level5.title": [
+          "str"
+        ],
+        "levels.Level5.description": [
+          "str"
+        ],
+        "levels.Level5.action_verbs": [
+          "list"
+        ],
+        "levels.Level6.title": [
+          "str"
+        ],
+        "levels.Level6.description": [
+          "str"
+        ],
+        "levels.Level6.action_verbs": [
+          "list"
+        ],
+        "status": [
+          "str"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 1,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_school_monthly_performance": {
+    "schema": {
+      "fields": {
+        "_id.school_id": [
+          "ObjectId"
+        ],
+        "_id.month": [
+          "str"
+        ],
+        "school_name": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "average": [
+          "float"
+        ],
+        "outstanding": [
+          "float"
+        ],
+        "underperforming": [
+          "float"
+        ],
+        "academic_score": [
+          "float"
+        ],
+        "student_count": [
+          "int"
+        ],
+        "submission_count": [
+          "int"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 600,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_students": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "student_sis_id": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "class.sis_id": [
+          "str"
+        ],
+        "role_type": [
+          "str"
+        ],
+        "user.email_id": [
+          "NoneType",
+          "str"
+        ],
+        "user.sis_id": [
+          "str"
+        ],
+        "class.id": [
+          "ObjectId"
+        ],
+        "course.id": [
+          "ObjectId"
+        ],
+        "course.sis_id": [
+          "str"
+        ],
+        "school.id": [
+          "ObjectId"
+        ],
+        "school.name": [
+          "str"
+        ],
+        "school.sis_id": [
+          "str"
+        ],
+        "state_id": [
+          "ObjectId"
+        ],
+        "subject.grades": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "user.first_name": [
+          "str"
+        ],
+        "user.id": [
+          "ObjectId"
+        ],
+        "user.last_name": [
+          "str"
+        ],
+        "updated_at": [
+          "str"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "bronze_survey_responses": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "submitted_at": [
+          "datetime"
+        ],
+        "survey_id": [
+          "ObjectId"
+        ],
+        "user.role": [
+          "str"
+        ],
+        "user.user_id": [
+          "ObjectId"
+        ],
+        "school_id": [
+          "ObjectId"
+        ],
+        "questions.question1.title": [
+          "str"
+        ],
+        "questions.question1.answer": [
+          "str"
+        ],
+        "questions.question2.title": [
+          "str"
+        ],
+        "questions.question2.answer": [
+          "str"
+        ],
+        "questions.question3.title": [
+          "str"
+        ],
+        "questions.question3.answer": [
+          "str"
+        ],
+        "questions.question4.title": [
+          "str"
+        ],
+        "questions.question4.answer": [
+          "str"
+        ],
+        "questions.question5.title": [
+          "str"
+        ],
+        "questions.question5.answer": [
+          "str"
+        ],
+        "questions.question6.title": [
+          "str"
+        ],
+        "questions.question6.answer": [
+          "str"
+        ],
+        "questions.question7.title": [
+          "str"
+        ],
+        "questions.question7.answer": [
+          "str"
+        ],
+        "questions.question8.title": [
+          "str"
+        ],
+        "questions.question8.answer": [
+          "str"
+        ],
+        "questions.question9.title": [
+          "str"
+        ],
+        "questions.question9.answer": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "synthetic": [
+          "bool"
+        ],
+        "parsed_at": [
+          "datetime"
+        ],
+        "questions.question10.title": [
+          "str"
+        ],
+        "questions.question10.answer": [
+          "str"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_pd_content_views": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "pd_content_id": [
+          "ObjectId"
+        ],
+        "teacher_user_id": [
+          "ObjectId"
+        ],
+        "last_viewed_date": [
+          "str"
+        ],
+        "teacher_feedback.is_liked": [
+          "bool"
+        ],
+        "teacher_feedback.rating": [
+          "int"
+        ],
+        "updated_at": [
+          "str"
+        ],
+        "is_accepted": [
+          "bool"
+        ]
+      },
+      "sampled_documents": 1,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_per_survey_analytics": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "survey_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "domains": [
+          "list"
+        ]
+      },
+      "sampled_documents": 12,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_school_tired_hqim_adoption_rate": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "school_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "adoption.full": [
+          "int"
+        ],
+        "adoption.partial": [
+          "int"
+        ],
+        "adoption.low": [
+          "int"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "modified_lessons": [
+          "int"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_hqim_provider": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "provider_name": [
+          "str"
+        ],
+        "search_keywords": [
+          "list"
+        ],
+        "status": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 2,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_student_grades": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "average_score": [
+          "float"
+        ],
+        "class.id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "max_points": [
+          "int"
+        ],
+        "n_quizzes": [
+          "int"
+        ],
+        "percentage_score": [
+          "float"
+        ],
+        "points_scored": [
+          "int"
+        ],
+        "subject.grades": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.id": [
+          "ObjectId"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "user.id": [
+          "ObjectId"
+        ],
+        "user.sis_id": [
+          "str"
+        ],
+        "user.first_name": [
+          "str"
+        ],
+        "user.last_name": [
+          "str"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_effect_estimation_results": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "class_id": [
+          "ObjectId"
+        ],
+        "teacher_user_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "features": [
+          "list"
+        ],
+        "benchmarks": [
+          "list"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 3,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_teacher_remediation": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "state_standard_id": [
+          "NoneType"
+        ],
+        "concept_id": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "class.id": [
+          "ObjectId"
+        ],
+        "class.title": [
+          "str"
+        ],
+        "class.grade": [
+          "str"
+        ],
+        "class.subject_name": [
+          "str"
+        ],
+        "content.issue": [
+          "str"
+        ],
+        "content.quick_strategies": [
+          "list"
+        ],
+        "content.tooltip": [
+          "str"
+        ],
+        "content.severity": [
+          "str"
+        ],
+        "content.applies_to": [
+          "list"
+        ],
+        "remediation.id": [
+          "ObjectId"
+        ],
+        "remediation.title": [
+          "str"
+        ],
+        "remediation.description": [
+          "str"
+        ],
+        "remediation.media_type": [
+          "str"
+        ],
+        "remediation.media_url": [
+          "str"
+        ],
+        "remediation.tag_line": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "teacher_feedback.is_helpful": [
+          "NoneType"
+        ],
+        "teacher_feedback.rating": [
+          "NoneType"
+        ],
+        "duration": [
+          "NoneType"
+        ],
+        "is_completed": [
+          "bool"
+        ],
+        "is_accepted": [
+          "bool"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_subjects": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "subject_name": [
+          "str"
+        ],
+        "grade": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 6,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_instructional_subdomains": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "domain_id": [
+          "str"
+        ],
+        "name": [
+          "str"
+        ],
+        "subdomains.E1.name": [
+          "str"
+        ],
+        "subdomains.E1.description": [
+          "str"
+        ],
+        "subdomains.E1.selection_criteria": [
+          "str"
+        ],
+        "subdomains.E2.name": [
+          "str"
+        ],
+        "subdomains.E2.description": [
+          "str"
+        ],
+        "subdomains.E2.selection_criteria": [
+          "str"
+        ],
+        "subdomains.E3.name": [
+          "str"
+        ],
+        "subdomains.E3.description": [
+          "str"
+        ],
+        "subdomains.E3.selection_criteria": [
+          "str"
+        ],
+        "subdomains.E4.name": [
+          "str"
+        ],
+        "subdomains.E4.description": [
+          "str"
+        ],
+        "subdomains.E4.selection_criteria": [
+          "str"
+        ],
+        "subdomains.E5.name": [
+          "str"
+        ],
+        "subdomains.E5.description": [
+          "str"
+        ],
+        "subdomains.E5.selection_criteria": [
+          "str"
+        ],
+        "subdomains.E6.name": [
+          "str"
+        ],
+        "subdomains.E6.description": [
+          "str"
+        ],
+        "subdomains.E6.selection_criteria": [
+          "str"
+        ],
+        "subdomains.E7.name": [
+          "str"
+        ],
+        "subdomains.E7.description": [
+          "str"
+        ],
+        "subdomains.E7.selection_criteria": [
+          "str"
+        ],
+        "version": [
+          "str",
+          "int"
+        ],
+        "description": [
+          "str"
+        ],
+        "subdomains.D1.name": [
+          "str"
+        ],
+        "subdomains.D1.description": [
+          "str"
+        ],
+        "subdomains.D1.selection_criteria": [
+          "str"
+        ],
+        "subdomains.D2.name": [
+          "str"
+        ],
+        "subdomains.D2.description": [
+          "str"
+        ],
+        "subdomains.D2.selection_criteria": [
+          "str"
+        ],
+        "subdomains.D3.name": [
+          "str"
+        ],
+        "subdomains.D3.description": [
+          "str"
+        ],
+        "subdomains.D3.selection_criteria": [
+          "str"
+        ],
+        "subdomains.D4.name": [
+          "str"
+        ],
+        "subdomains.D4.description": [
+          "str"
+        ],
+        "subdomains.D4.selection_criteria": [
+          "str"
+        ],
+        "subdomains.C1.name": [
+          "str"
+        ],
+        "subdomains.C1.description": [
+          "str"
+        ],
+        "subdomains.C1.selection_criteria": [
+          "str"
+        ],
+        "subdomains.C2.name": [
+          "str"
+        ],
+        "subdomains.C2.description": [
+          "str"
+        ],
+        "subdomains.C2.selection_criteria": [
+          "str"
+        ],
+        "subdomains.C3.name": [
+          "str"
+        ],
+        "subdomains.C3.description": [
+          "str"
+        ],
+        "subdomains.C3.selection_criteria": [
+          "str"
+        ],
+        "subdomains.C4.name": [
+          "str"
+        ],
+        "subdomains.C4.description": [
+          "str"
+        ],
+        "subdomains.C4.selection_criteria": [
+          "str"
+        ],
+        "subdomains.B1.name": [
+          "str"
+        ],
+        "subdomains.B1.description": [
+          "str"
+        ],
+        "subdomains.B1.selection_criteria": [
+          "str"
+        ],
+        "subdomains.B2.name": [
+          "str"
+        ],
+        "subdomains.B2.description": [
+          "str"
+        ],
+        "subdomains.B2.selection_criteria": [
+          "str"
+        ],
+        "subdomains.B3.name": [
+          "str"
+        ],
+        "subdomains.B3.description": [
+          "str"
+        ],
+        "subdomains.B3.selection_criteria": [
+          "str"
+        ],
+        "subdomains.B4.name": [
+          "str"
+        ],
+        "subdomains.B4.description": [
+          "str"
+        ],
+        "subdomains.B4.selection_criteria": [
+          "str"
+        ],
+        "subdomains.B5.name": [
+          "str"
+        ],
+        "subdomains.B5.description": [
+          "str"
+        ],
+        "subdomains.B5.selection_criteria": [
+          "str"
+        ],
+        "subdomains.A1.name": [
+          "str"
+        ],
+        "subdomains.A1.description": [
+          "str"
+        ],
+        "subdomains.A1.selection_criteria": [
+          "str"
+        ],
+        "subdomains.A2.name": [
+          "str"
+        ],
+        "subdomains.A2.description": [
+          "str"
+        ],
+        "subdomains.A2.selection_criteria": [
+          "str"
+        ],
+        "subdomains.A3.name": [
+          "str"
+        ],
+        "subdomains.A3.description": [
+          "str"
+        ],
+        "subdomains.A3.selection_criteria": [
+          "str"
+        ],
+        "subdomains.A4.name": [
+          "str"
+        ],
+        "subdomains.A4.description": [
+          "str"
+        ],
+        "subdomains.A4.selection_criteria": [
+          "str"
+        ],
+        "subdomains.A5.name": [
+          "str"
+        ],
+        "subdomains.A5.description": [
+          "str"
+        ],
+        "subdomains.A5.selection_criteria": [
+          "str"
+        ],
+        "subdomains.A6.name": [
+          "str"
+        ],
+        "subdomains.A6.description": [
+          "str"
+        ],
+        "subdomains.A6.selection_criteria": [
+          "str"
+        ],
+        "subdomains.A7.name": [
+          "str"
+        ],
+        "subdomains.A7.description": [
+          "str"
+        ],
+        "subdomains.A7.selection_criteria": [
+          "str"
+        ],
+        "subdomains.A8.name": [
+          "str"
+        ],
+        "subdomains.A8.description": [
+          "str"
+        ],
+        "subdomains.A8.selection_criteria": [
+          "str"
+        ],
+        "subdomains.A9.name": [
+          "str"
+        ],
+        "subdomains.A9.description": [
+          "str"
+        ],
+        "subdomains.A9.selection_criteria": [
+          "str"
+        ],
+        "domain.code": [
+          "str"
+        ],
+        "domain.name": [
+          "str"
+        ],
+        "subdomain.code": [
+          "str"
+        ],
+        "subdomain.name": [
+          "str"
+        ],
+        "subdomain.description": [
+          "str"
+        ],
+        "pd": [
+          "list"
+        ],
+        "subdomain_code": [
+          "str"
+        ],
+        "created_at": [
+          "str"
+        ],
+        "domain_code": [
+          "str"
+        ],
+        "domain_desc": [
+          "str"
+        ],
+        "domain_name": [
+          "str"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "objectives.D06.SB4.O001.code": [
+          "str"
+        ],
+        "objectives.D06.SB4.O001.text": [
+          "str"
+        ],
+        "objectives.D06.SB4.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB4.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB4.O002.code": [
+          "str"
+        ],
+        "objectives.D06.SB4.O002.text": [
+          "str"
+        ],
+        "objectives.D06.SB4.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB4.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB4.O003.code": [
+          "str"
+        ],
+        "objectives.D06.SB4.O003.text": [
+          "str"
+        ],
+        "objectives.D06.SB4.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB4.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB4.O004.code": [
+          "str"
+        ],
+        "objectives.D06.SB4.O004.text": [
+          "str"
+        ],
+        "objectives.D06.SB4.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB4.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB4.O005.code": [
+          "str"
+        ],
+        "objectives.D06.SB4.O005.text": [
+          "str"
+        ],
+        "objectives.D06.SB4.O005.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB4.O005.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB4.O006.code": [
+          "str"
+        ],
+        "objectives.D06.SB4.O006.text": [
+          "str"
+        ],
+        "objectives.D06.SB4.O006.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB4.O006.priority": [
+          "NoneType"
+        ],
+        "subdomain_name": [
+          "str"
+        ],
+        "updated_at": [
+          "str"
+        ],
+        "objectives.D06.SB3.O001.code": [
+          "str"
+        ],
+        "objectives.D06.SB3.O001.text": [
+          "str"
+        ],
+        "objectives.D06.SB3.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB3.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB3.O002.code": [
+          "str"
+        ],
+        "objectives.D06.SB3.O002.text": [
+          "str"
+        ],
+        "objectives.D06.SB3.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB3.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB3.O003.code": [
+          "str"
+        ],
+        "objectives.D06.SB3.O003.text": [
+          "str"
+        ],
+        "objectives.D06.SB3.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB3.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB3.O004.code": [
+          "str"
+        ],
+        "objectives.D06.SB3.O004.text": [
+          "str"
+        ],
+        "objectives.D06.SB3.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB3.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB2.O001.code": [
+          "str"
+        ],
+        "objectives.D06.SB2.O001.text": [
+          "str"
+        ],
+        "objectives.D06.SB2.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB2.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB2.O002.code": [
+          "str"
+        ],
+        "objectives.D06.SB2.O002.text": [
+          "str"
+        ],
+        "objectives.D06.SB2.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB2.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB2.O003.code": [
+          "str"
+        ],
+        "objectives.D06.SB2.O003.text": [
+          "str"
+        ],
+        "objectives.D06.SB2.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB2.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB2.O004.code": [
+          "str"
+        ],
+        "objectives.D06.SB2.O004.text": [
+          "str"
+        ],
+        "objectives.D06.SB2.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB2.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB1.O001.code": [
+          "str"
+        ],
+        "objectives.D06.SB1.O001.text": [
+          "str"
+        ],
+        "objectives.D06.SB1.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB1.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB1.O002.code": [
+          "str"
+        ],
+        "objectives.D06.SB1.O002.text": [
+          "str"
+        ],
+        "objectives.D06.SB1.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB1.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB1.O003.code": [
+          "str"
+        ],
+        "objectives.D06.SB1.O003.text": [
+          "str"
+        ],
+        "objectives.D06.SB1.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB1.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D06.SB1.O004.code": [
+          "str"
+        ],
+        "objectives.D06.SB1.O004.text": [
+          "str"
+        ],
+        "objectives.D06.SB1.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D06.SB1.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA4.O001.code": [
+          "str"
+        ],
+        "objectives.D05.SA4.O001.text": [
+          "str"
+        ],
+        "objectives.D05.SA4.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA4.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA4.O002.code": [
+          "str"
+        ],
+        "objectives.D05.SA4.O002.text": [
+          "str"
+        ],
+        "objectives.D05.SA4.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA4.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA4.O003.code": [
+          "str"
+        ],
+        "objectives.D05.SA4.O003.text": [
+          "str"
+        ],
+        "objectives.D05.SA4.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA4.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA4.O004.code": [
+          "str"
+        ],
+        "objectives.D05.SA4.O004.text": [
+          "str"
+        ],
+        "objectives.D05.SA4.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA4.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA3.O001.code": [
+          "str"
+        ],
+        "objectives.D05.SA3.O001.text": [
+          "str"
+        ],
+        "objectives.D05.SA3.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA3.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA3.O002.code": [
+          "str"
+        ],
+        "objectives.D05.SA3.O002.text": [
+          "str"
+        ],
+        "objectives.D05.SA3.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA3.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA3.O003.code": [
+          "str"
+        ],
+        "objectives.D05.SA3.O003.text": [
+          "str"
+        ],
+        "objectives.D05.SA3.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA3.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA3.O004.code": [
+          "str"
+        ],
+        "objectives.D05.SA3.O004.text": [
+          "str"
+        ],
+        "objectives.D05.SA3.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA3.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA2.O001.code": [
+          "str"
+        ],
+        "objectives.D05.SA2.O001.text": [
+          "str"
+        ],
+        "objectives.D05.SA2.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA2.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA2.O002.code": [
+          "str"
+        ],
+        "objectives.D05.SA2.O002.text": [
+          "str"
+        ],
+        "objectives.D05.SA2.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA2.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA2.O003.code": [
+          "str"
+        ],
+        "objectives.D05.SA2.O003.text": [
+          "str"
+        ],
+        "objectives.D05.SA2.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA2.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA2.O004.code": [
+          "str"
+        ],
+        "objectives.D05.SA2.O004.text": [
+          "str"
+        ],
+        "objectives.D05.SA2.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA2.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA1.O001.code": [
+          "str"
+        ],
+        "objectives.D05.SA1.O001.text": [
+          "str"
+        ],
+        "objectives.D05.SA1.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA1.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA1.O002.code": [
+          "str"
+        ],
+        "objectives.D05.SA1.O002.text": [
+          "str"
+        ],
+        "objectives.D05.SA1.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA1.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D05.SA1.O003.code": [
+          "str"
+        ],
+        "objectives.D05.SA1.O003.text": [
+          "str"
+        ],
+        "objectives.D05.SA1.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D05.SA1.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4E.O001.code": [
+          "str"
+        ],
+        "objectives.D04.S4E.O001.text": [
+          "str"
+        ],
+        "objectives.D04.S4E.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4E.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4E.O002.code": [
+          "str"
+        ],
+        "objectives.D04.S4E.O002.text": [
+          "str"
+        ],
+        "objectives.D04.S4E.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4E.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4E.O003.code": [
+          "str"
+        ],
+        "objectives.D04.S4E.O003.text": [
+          "str"
+        ],
+        "objectives.D04.S4E.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4E.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4E.O004.code": [
+          "str"
+        ],
+        "objectives.D04.S4E.O004.text": [
+          "str"
+        ],
+        "objectives.D04.S4E.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4E.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4D.O001.code": [
+          "str"
+        ],
+        "objectives.D04.S4D.O001.text": [
+          "str"
+        ],
+        "objectives.D04.S4D.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4D.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4C.O001.code": [
+          "str"
+        ],
+        "objectives.D04.S4C.O001.text": [
+          "str"
+        ],
+        "objectives.D04.S4C.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4C.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4C.O002.code": [
+          "str"
+        ],
+        "objectives.D04.S4C.O002.text": [
+          "str"
+        ],
+        "objectives.D04.S4C.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4C.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4C.O003.code": [
+          "str"
+        ],
+        "objectives.D04.S4C.O003.text": [
+          "str"
+        ],
+        "objectives.D04.S4C.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4C.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4C.O004.code": [
+          "str"
+        ],
+        "objectives.D04.S4C.O004.text": [
+          "str"
+        ],
+        "objectives.D04.S4C.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4C.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4B.O001.code": [
+          "str"
+        ],
+        "objectives.D04.S4B.O001.text": [
+          "str"
+        ],
+        "objectives.D04.S4B.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4B.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4B.O002.code": [
+          "str"
+        ],
+        "objectives.D04.S4B.O002.text": [
+          "str"
+        ],
+        "objectives.D04.S4B.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4B.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4B.O003.code": [
+          "str"
+        ],
+        "objectives.D04.S4B.O003.text": [
+          "str"
+        ],
+        "objectives.D04.S4B.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4B.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4B.O004.code": [
+          "str"
+        ],
+        "objectives.D04.S4B.O004.text": [
+          "str"
+        ],
+        "objectives.D04.S4B.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4B.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4A.O001.code": [
+          "str"
+        ],
+        "objectives.D04.S4A.O001.text": [
+          "str"
+        ],
+        "objectives.D04.S4A.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4A.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4A.O002.code": [
+          "str"
+        ],
+        "objectives.D04.S4A.O002.text": [
+          "str"
+        ],
+        "objectives.D04.S4A.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4A.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D04.S4A.O003.code": [
+          "str"
+        ],
+        "objectives.D04.S4A.O003.text": [
+          "str"
+        ],
+        "objectives.D04.S4A.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D04.S4A.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3E.O001.code": [
+          "str"
+        ],
+        "objectives.D03.S3E.O001.text": [
+          "str"
+        ],
+        "objectives.D03.S3E.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3E.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3E.O002.code": [
+          "str"
+        ],
+        "objectives.D03.S3E.O002.text": [
+          "str"
+        ],
+        "objectives.D03.S3E.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3E.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3E.O003.code": [
+          "str"
+        ],
+        "objectives.D03.S3E.O003.text": [
+          "str"
+        ],
+        "objectives.D03.S3E.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3E.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3E.O004.code": [
+          "str"
+        ],
+        "objectives.D03.S3E.O004.text": [
+          "str"
+        ],
+        "objectives.D03.S3E.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3E.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3D.O001.code": [
+          "str"
+        ],
+        "objectives.D03.S3D.O001.text": [
+          "str"
+        ],
+        "objectives.D03.S3D.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3D.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3D.O002.code": [
+          "str"
+        ],
+        "objectives.D03.S3D.O002.text": [
+          "str"
+        ],
+        "objectives.D03.S3D.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3D.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3D.O003.code": [
+          "str"
+        ],
+        "objectives.D03.S3D.O003.text": [
+          "str"
+        ],
+        "objectives.D03.S3D.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3D.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3D.O004.code": [
+          "str"
+        ],
+        "objectives.D03.S3D.O004.text": [
+          "str"
+        ],
+        "objectives.D03.S3D.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3D.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3D.O005.code": [
+          "str"
+        ],
+        "objectives.D03.S3D.O005.text": [
+          "str"
+        ],
+        "objectives.D03.S3D.O005.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3D.O005.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3C.O001.code": [
+          "str"
+        ],
+        "objectives.D03.S3C.O001.text": [
+          "str"
+        ],
+        "objectives.D03.S3C.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3C.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3C.O002.code": [
+          "str"
+        ],
+        "objectives.D03.S3C.O002.text": [
+          "str"
+        ],
+        "objectives.D03.S3C.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3C.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3B.O001.code": [
+          "str"
+        ],
+        "objectives.D03.S3B.O001.text": [
+          "str"
+        ],
+        "objectives.D03.S3B.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3B.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3B.O002.code": [
+          "str"
+        ],
+        "objectives.D03.S3B.O002.text": [
+          "str"
+        ],
+        "objectives.D03.S3B.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3B.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3B.O003.code": [
+          "str"
+        ],
+        "objectives.D03.S3B.O003.text": [
+          "str"
+        ],
+        "objectives.D03.S3B.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3B.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3A.O001.code": [
+          "str"
+        ],
+        "objectives.D03.S3A.O001.text": [
+          "str"
+        ],
+        "objectives.D03.S3A.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3A.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3A.O002.code": [
+          "str"
+        ],
+        "objectives.D03.S3A.O002.text": [
+          "str"
+        ],
+        "objectives.D03.S3A.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3A.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D03.S3A.O003.code": [
+          "str"
+        ],
+        "objectives.D03.S3A.O003.text": [
+          "str"
+        ],
+        "objectives.D03.S3A.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D03.S3A.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2D.O001.code": [
+          "str"
+        ],
+        "objectives.D02.S2D.O001.text": [
+          "str"
+        ],
+        "objectives.D02.S2D.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2D.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2D.O002.code": [
+          "str"
+        ],
+        "objectives.D02.S2D.O002.text": [
+          "str"
+        ],
+        "objectives.D02.S2D.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2D.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2D.O003.code": [
+          "str"
+        ],
+        "objectives.D02.S2D.O003.text": [
+          "str"
+        ],
+        "objectives.D02.S2D.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2D.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2D.O004.code": [
+          "str"
+        ],
+        "objectives.D02.S2D.O004.text": [
+          "str"
+        ],
+        "objectives.D02.S2D.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2D.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2C.O001.code": [
+          "str"
+        ],
+        "objectives.D02.S2C.O001.text": [
+          "str"
+        ],
+        "objectives.D02.S2C.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2C.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2C.O002.code": [
+          "str"
+        ],
+        "objectives.D02.S2C.O002.text": [
+          "str"
+        ],
+        "objectives.D02.S2C.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2C.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2C.O003.code": [
+          "str"
+        ],
+        "objectives.D02.S2C.O003.text": [
+          "str"
+        ],
+        "objectives.D02.S2C.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2C.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2C.O004.code": [
+          "str"
+        ],
+        "objectives.D02.S2C.O004.text": [
+          "str"
+        ],
+        "objectives.D02.S2C.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2C.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2C.O005.code": [
+          "str"
+        ],
+        "objectives.D02.S2C.O005.text": [
+          "str"
+        ],
+        "objectives.D02.S2C.O005.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2C.O005.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2B.O001.code": [
+          "str"
+        ],
+        "objectives.D02.S2B.O001.text": [
+          "str"
+        ],
+        "objectives.D02.S2B.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2B.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2B.O002.code": [
+          "str"
+        ],
+        "objectives.D02.S2B.O002.text": [
+          "str"
+        ],
+        "objectives.D02.S2B.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2B.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2B.O003.code": [
+          "str"
+        ],
+        "objectives.D02.S2B.O003.text": [
+          "str"
+        ],
+        "objectives.D02.S2B.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2B.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2A.O001.code": [
+          "str"
+        ],
+        "objectives.D02.S2A.O001.text": [
+          "str"
+        ],
+        "objectives.D02.S2A.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2A.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D02.S2A.O002.code": [
+          "str"
+        ],
+        "objectives.D02.S2A.O002.text": [
+          "str"
+        ],
+        "objectives.D02.S2A.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D02.S2A.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1D.O001.code": [
+          "str"
+        ],
+        "objectives.D01.S1D.O001.text": [
+          "str"
+        ],
+        "objectives.D01.S1D.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1D.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1D.O002.code": [
+          "str"
+        ],
+        "objectives.D01.S1D.O002.text": [
+          "str"
+        ],
+        "objectives.D01.S1D.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1D.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1D.O003.code": [
+          "str"
+        ],
+        "objectives.D01.S1D.O003.text": [
+          "str"
+        ],
+        "objectives.D01.S1D.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1D.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1D.O004.code": [
+          "str"
+        ],
+        "objectives.D01.S1D.O004.text": [
+          "str"
+        ],
+        "objectives.D01.S1D.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1D.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1C.O001.code": [
+          "str"
+        ],
+        "objectives.D01.S1C.O001.text": [
+          "str"
+        ],
+        "objectives.D01.S1C.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1C.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1C.O002.code": [
+          "str"
+        ],
+        "objectives.D01.S1C.O002.text": [
+          "str"
+        ],
+        "objectives.D01.S1C.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1C.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1C.O003.code": [
+          "str"
+        ],
+        "objectives.D01.S1C.O003.text": [
+          "str"
+        ],
+        "objectives.D01.S1C.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1C.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1C.O004.code": [
+          "str"
+        ],
+        "objectives.D01.S1C.O004.text": [
+          "str"
+        ],
+        "objectives.D01.S1C.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1C.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1C.O005.code": [
+          "str"
+        ],
+        "objectives.D01.S1C.O005.text": [
+          "str"
+        ],
+        "objectives.D01.S1C.O005.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1C.O005.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1C.O006.code": [
+          "str"
+        ],
+        "objectives.D01.S1C.O006.text": [
+          "str"
+        ],
+        "objectives.D01.S1C.O006.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1C.O006.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1B.O001.code": [
+          "str"
+        ],
+        "objectives.D01.S1B.O001.text": [
+          "str"
+        ],
+        "objectives.D01.S1B.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1B.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1B.O002.code": [
+          "str"
+        ],
+        "objectives.D01.S1B.O002.text": [
+          "str"
+        ],
+        "objectives.D01.S1B.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1B.O002.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1B.O003.code": [
+          "str"
+        ],
+        "objectives.D01.S1B.O003.text": [
+          "str"
+        ],
+        "objectives.D01.S1B.O003.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1B.O003.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1B.O004.code": [
+          "str"
+        ],
+        "objectives.D01.S1B.O004.text": [
+          "str"
+        ],
+        "objectives.D01.S1B.O004.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1B.O004.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1A.O001.code": [
+          "str"
+        ],
+        "objectives.D01.S1A.O001.text": [
+          "str"
+        ],
+        "objectives.D01.S1A.O001.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1A.O001.priority": [
+          "NoneType"
+        ],
+        "objectives.D01.S1A.O002.code": [
+          "str"
+        ],
+        "objectives.D01.S1A.O002.text": [
+          "str"
+        ],
+        "objectives.D01.S1A.O002.tags_codes": [
+          "list"
+        ],
+        "objectives.D01.S1A.O002.priority": [
+          "NoneType"
+        ]
+      },
+      "sampled_documents": 60,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_lesson_plan_bda": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "class_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "document_id": [
+          "ObjectId"
+        ],
+        "results.lesson_topic": [
+          "str"
+        ],
+        "results.learning_target": [
+          "str"
+        ],
+        "results.total_standards_found": [
+          "int"
+        ],
+        "results.standards_alignment": [
+          "list"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "hqim_alignment_score": [
+          "float"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "bucket": [
+          "str"
+        ],
+        "school_id": [
+          "ObjectId"
+        ],
+        "related_concepts": [
+          "list"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_pages": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "str"
+        ],
+        "class.lms_id": [
+          "str"
+        ],
+        "page_lms_id": [
+          "str"
+        ],
+        "attachments": [
+          "list"
+        ],
+        "attachments_count": [
+          "int"
+        ],
+        "description": [
+          "str"
+        ],
+        "lms_id": [
+          "str"
+        ],
+        "text": [
+          "str"
+        ],
+        "title": [
+          "str"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "user.email_id": [
+          "str"
+        ],
+        "user.first_name": [
+          "str"
+        ],
+        "user.id": [
+          "ObjectId"
+        ],
+        "user.last_name": [
+          "str"
+        ],
+        "user.sis_id": [
+          "str"
+        ]
+      },
+      "sampled_documents": 286,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_teacher_pd": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "teacher_user_id": [
+          "ObjectId"
+        ],
+        "state_standard_id": [
+          "NoneType"
+        ],
+        "concept_id": [
+          "NoneType"
+        ],
+        "class.id": [
+          "ObjectId"
+        ],
+        "class.title": [
+          "str"
+        ],
+        "class.grade": [
+          "str"
+        ],
+        "class.subject_name": [
+          "str"
+        ],
+        "pd_type": [
+          "str"
+        ],
+        "content.issue": [
+          "str"
+        ],
+        "content.quick_strategies": [
+          "list"
+        ],
+        "content.tooltip": [
+          "str"
+        ],
+        "content.severity": [
+          "str"
+        ],
+        "content.applies_to": [
+          "list"
+        ],
+        "pd.id": [
+          "ObjectId"
+        ],
+        "pd.title": [
+          "str"
+        ],
+        "pd.description": [
+          "str"
+        ],
+        "pd.content_length": [
+          "str"
+        ],
+        "pd.media_type": [
+          "str"
+        ],
+        "pd.media_url": [
+          "str"
+        ],
+        "pd.tag_line": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "teacher_feedback.is_helpful": [
+          "NoneType"
+        ],
+        "teacher_feedback.rating": [
+          "NoneType"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "is_completed": [
+          "bool"
+        ],
+        "is_accepted": [
+          "bool"
+        ],
+        "district_id": [
+          "ObjectId"
+        ]
+      },
+      "sampled_documents": 888,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "temp_bronze_quiz_submissions": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "graded_at": [
+          "str"
+        ],
+        "is_late": [
+          "bool"
+        ],
+        "max_points": [
+          "int"
+        ],
+        "points_scored": [
+          "int"
+        ],
+        "responses": [
+          "list"
+        ],
+        "subject.grades": [
+          "str"
+        ],
+        "subject.id": [
+          "ObjectId",
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "submitted_docs": [
+          "list"
+        ],
+        "time_spent_minutes": [
+          "int"
+        ],
+        "class.sis_id": [
+          "str"
+        ],
+        "class.id": [
+          "ObjectId",
+          "str"
+        ],
+        "quiz.sis_id": [
+          "str"
+        ],
+        "quiz.id": [
+          "ObjectId"
+        ],
+        "sis_id": [
+          "str",
+          "Binary"
+        ],
+        "start_time": [
+          "datetime"
+        ],
+        "end_time": [
+          "datetime"
+        ],
+        "submitted_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "user.sis_id": [
+          "str",
+          "Binary"
+        ],
+        "user.id": [
+          "ObjectId"
+        ],
+        "user.email": [
+          "NoneType"
+        ],
+        "user.first_name": [
+          "str"
+        ],
+        "user.last_name": [
+          "str"
+        ]
+      },
+      "sampled_documents": 600,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "bronze_etl_fetcher_logs": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "str"
+        ],
+        "lms_type": [
+          "str"
+        ],
+        "request_log_summary.district_id": [
+          "str"
+        ],
+        "request_log_summary.run_metadata.start_time": [
+          "str"
+        ],
+        "request_log_summary.run_metadata.end_time": [
+          "str"
+        ],
+        "request_log_summary.run_metadata.total_runtime_seconds": [
+          "float"
+        ],
+        "request_log_summary.run_metadata.total_runtime_formatted": [
+          "str"
+        ],
+        "request_log_summary.run_metadata.requests_per_second": [
+          "float"
+        ],
+        "request_log_summary.total_requests": [
+          "int"
+        ],
+        "request_log_summary.successful_requests": [
+          "int"
+        ],
+        "request_log_summary.failed_requests": [
+          "int"
+        ],
+        "request_log_summary.success_rate": [
+          "float",
+          "int"
+        ],
+        "request_log_summary.status_codes.200": [
+          "int"
+        ],
+        "request_log_summary.status_codes.404": [
+          "int"
+        ],
+        "request_log_summary.data_types.course": [
+          "str"
+        ],
+        "request_log_summary.data_types.course_settings": [
+          "str"
+        ],
+        "request_log_summary.data_types.course_user": [
+          "str"
+        ],
+        "request_log_summary.data_types.enrollment": [
+          "str"
+        ],
+        "request_log_summary.data_types.discussion": [
+          "str"
+        ],
+        "request_log_summary.data_types.file": [
+          "str"
+        ],
+        "request_log_summary.data_types.folder": [
+          "str"
+        ],
+        "request_log_summary.data_types.calendar_event": [
+          "str"
+        ],
+        "request_log_summary.data_types.module": [
+          "str"
+        ],
+        "request_log_summary.data_types.page": [
+          "str"
+        ],
+        "request_log_summary.data_types.analytics": [
+          "str"
+        ],
+        "request_log_summary.data_types.module_item": [
+          "str"
+        ],
+        "request_log_summary.data_types.assignment_submission": [
+          "str"
+        ],
+        "request_log_summary.data_types.quiz_question": [
+          "str"
+        ],
+        "request_log_summary.data_types.quiz_submission": [
+          "str"
+        ],
+        "request_log_summary.data_types.unknown": [
+          "str"
+        ],
+        "request_log_summary.data_types_detailed.course.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.course.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.course.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.course.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.course_settings.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.course_settings.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.course_settings.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.course_settings.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.course_user.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.course_user.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.course_user.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.course_user.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.enrollment.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.enrollment.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.enrollment.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.enrollment.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.discussion.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.discussion.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.discussion.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.discussion.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.file.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.file.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.file.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.file.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.folder.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.folder.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.folder.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.folder.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.calendar_event.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.calendar_event.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.calendar_event.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.calendar_event.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.module.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.module.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.module.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.module.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.page.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.page.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.page.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.page.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.analytics.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.analytics.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.analytics.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.analytics.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.module_item.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.module_item.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.module_item.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.module_item.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.assignment_submission.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.assignment_submission.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.assignment_submission.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.assignment_submission.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.quiz_question.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.quiz_question.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.quiz_question.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.quiz_question.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.quiz_submission.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.quiz_submission.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.quiz_submission.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.quiz_submission.success_rate": [
+          "float"
+        ],
+        "request_log_summary.data_types_detailed.unknown.total": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.unknown.successful": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.unknown.failed": [
+          "int"
+        ],
+        "request_log_summary.data_types_detailed.unknown.success_rate": [
+          "float"
+        ],
+        "request_log_summary.error_categories.not_found": [
+          "int"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305223.category": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305223.error_message": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305223.first_seen": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305223.status_code": [
+          "int"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305069.category": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305069.error_message": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305069.first_seen": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305069.status_code": [
+          "int"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305158.category": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305158.error_message": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305158.first_seen": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305158.status_code": [
+          "int"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305164.category": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305164.error_message": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305164.first_seen": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305164.status_code": [
+          "int"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305212.category": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305212.error_message": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305212.first_seen": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./calendar_events.course_12305212.status_code": [
+          "int"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305069.category": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305069.error_message": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305069.first_seen": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305069.status_code": [
+          "int"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305158.category": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305158.error_message": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305158.first_seen": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305158.status_code": [
+          "int"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305164.category": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305164.error_message": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305164.first_seen": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305164.status_code": [
+          "int"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305212.category": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305212.error_message": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305212.first_seen": [
+          "str"
+        ],
+        "request_log_summary.unavailable_endpoints./activity.course_12305212.status_code": [
+          "int"
+        ],
+        "request_log_summary.failed_due_to_free_account": [
+          "int"
+        ],
+        "exit_code": [
+          "int"
+        ],
+        "request_log": [
+          "list"
+        ]
+      },
+      "sampled_documents": 7,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "bronze_quiz_submissions": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "lms_id": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId",
+          "str"
+        ],
+        "quiz.lms_id": [
+          "str"
+        ],
+        "user.lms_id": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "end_time": [
+          "datetime"
+        ],
+        "is_late": [
+          "bool"
+        ],
+        "max_points": [
+          "float",
+          "int"
+        ],
+        "points_scored": [
+          "float",
+          "int"
+        ],
+        "start_time": [
+          "datetime"
+        ],
+        "submitted_at": [
+          "NoneType",
+          "datetime"
+        ],
+        "time_spent_minutes": [
+          "int"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "sis_id": [
+          "str"
+        ],
+        "class.sis_id": [
+          "str"
+        ],
+        "class.id": [
+          "ObjectId"
+        ],
+        "quiz.id": [
+          "ObjectId"
+        ],
+        "quiz.sis_id": [
+          "str"
+        ],
+        "quiz.title": [
+          "str"
+        ],
+        "responses": [
+          "list"
+        ],
+        "subject.grades": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.id": [
+          "ObjectId"
+        ],
+        "user.email": [
+          "str"
+        ],
+        "user.first_name": [
+          "str"
+        ],
+        "user.id": [
+          "ObjectId"
+        ],
+        "user.last_name": [
+          "str"
+        ],
+        "user.sis_id": [
+          "str"
+        ],
+        "graded_at": [
+          "str"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_per_school_survey_analytics": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "insights": [
+          "list"
+        ],
+        "school_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 150,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_surveys": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "assigned_to.schools": [
+          "list"
+        ],
+        "assigned_to.grades": [
+          "list"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "creator_user_id": [
+          "ObjectId"
+        ],
+        "description": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "due_at": [
+          "datetime"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "logo": [
+          "NoneType"
+        ],
+        "pages": [
+          "list"
+        ],
+        "placeholder_attributes.headerView": [
+          "str"
+        ],
+        "synthetic": [
+          "bool"
+        ],
+        "title": [
+          "str"
+        ],
+        "to_be_reported": [
+          "bool"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 12,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_survey_analytics_to_delete": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "survey_id": [
+          "ObjectId",
+          "str"
+        ],
+        "questions.question1.question_text": [
+          "str"
+        ],
+        "questions.question1.type": [
+          "str"
+        ],
+        "questions.question1.discovered_buckets": [
+          "list"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "questions.question2.question_text": [
+          "str"
+        ],
+        "questions.question2.type": [
+          "str"
+        ],
+        "questions.question2.average": [
+          "float"
+        ],
+        "questions.question2.discovered_buckets": [
+          "list"
+        ],
+        "response_count": [
+          "int"
+        ]
+      },
+      "sampled_documents": 4,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_user_daily_token_usage": {
+    "schema": {
+      "fields": {},
+      "sampled_documents": 0,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_zia_chunks": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "grade": [
+          "str"
+        ],
+        "starts_at": [
+          "datetime"
+        ],
+        "ends_at": [
+          "datetime"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "parsed_results": [
+          "list"
+        ],
+        "summary": [
+          "str"
+        ]
+      },
+      "sampled_documents": 12,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_etl_logs": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "document_id": [
+          "ObjectId"
+        ],
+        "file_name": [
+          "str"
+        ],
+        "file_type": [
+          "str"
+        ],
+        "row_number": [
+          "int"
+        ],
+        "sis_id": [
+          "str"
+        ],
+        "processed_data": [
+          "NoneType"
+        ],
+        "status": [
+          "str"
+        ],
+        "error_message": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 909,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_lesson_plan_zia_framework_evidences": {
+    "schema": {
+      "fields": {},
+      "sampled_documents": 0,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_teachers": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "teacher_sis_id": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "class.sis_id": [
+          "str"
+        ],
+        "role_type": [
+          "str"
+        ],
+        "user.email_id": [
+          "NoneType",
+          "str"
+        ],
+        "user.sis_id": [
+          "str"
+        ],
+        "class.id": [
+          "ObjectId"
+        ],
+        "course.id": [
+          "ObjectId"
+        ],
+        "course.sis_id": [
+          "str"
+        ],
+        "school.id": [
+          "ObjectId"
+        ],
+        "school.name": [
+          "str"
+        ],
+        "school.sis_id": [
+          "str"
+        ],
+        "state_id": [
+          "ObjectId"
+        ],
+        "subject.grades": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.id": [
+          "ObjectId"
+        ],
+        "user.first_name": [
+          "str"
+        ],
+        "user.id": [
+          "ObjectId"
+        ],
+        "user.last_name": [
+          "str"
+        ]
+      },
+      "sampled_documents": 509,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_remediation_material_bank": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "title": [
+          "str"
+        ],
+        "description": [
+          "str"
+        ],
+        "details.doc_url": [
+          "str"
+        ],
+        "details.file_type": [
+          "str"
+        ],
+        "subject.id": [
+          "ObjectId"
+        ],
+        "subject.grade": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "created_date": [
+          "datetime"
+        ],
+        "last_updated": [
+          "datetime"
+        ],
+        "metadata.keywords": [
+          "list"
+        ],
+        "embeddings.v1.vector": [
+          "list"
+        ],
+        "embeddings.v1.dims": [
+          "int"
+        ],
+        "embeddings.v1.model": [
+          "str"
+        ],
+        "embeddings.v1.provider": [
+          "str"
+        ],
+        "type": [
+          "str"
+        ],
+        "overview": [
+          "str"
+        ]
+      },
+      "sampled_documents": 34,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_chatbot_messages": {
+    "schema": {
+      "fields": {},
+      "sampled_documents": 0,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_lesson_plan_blooms_taxonomy": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "class_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "document_id": [
+          "ObjectId"
+        ],
+        "results.Remember.supporting_extract": [
+          "list"
+        ],
+        "results.Understand.supporting_extract": [
+          "list"
+        ],
+        "results.Apply.supporting_extract": [
+          "list"
+        ],
+        "results.Analyze.supporting_extract": [
+          "list"
+        ],
+        "results.Evaluate.supporting_extract": [
+          "list"
+        ],
+        "results.Create.supporting_extract": [
+          "list"
+        ],
+        "created_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_lesson_plan_udl": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "framework_code": [
+          "str"
+        ],
+        "framework_name": [
+          "str"
+        ],
+        "version": [
+          "str"
+        ],
+        "status": [
+          "str"
+        ],
+        "principle_code": [
+          "str"
+        ],
+        "principle_title": [
+          "str"
+        ],
+        "principle_description": [
+          "str"
+        ],
+        "guideline_code": [
+          "str"
+        ],
+        "guideline_title": [
+          "str"
+        ],
+        "guideline_description": [
+          "str"
+        ],
+        "considerations.P3.G9.C9.1.title": [
+          "str"
+        ],
+        "considerations.P3.G9.C9.1.description": [
+          "str"
+        ],
+        "considerations.P3.G9.C9.2.title": [
+          "str"
+        ],
+        "considerations.P3.G9.C9.2.description": [
+          "str"
+        ],
+        "considerations.P3.G9.C9.3.title": [
+          "str"
+        ],
+        "considerations.P3.G9.C9.3.description": [
+          "str"
+        ],
+        "considerations.P3.G9.C9.4.title": [
+          "str"
+        ],
+        "considerations.P3.G9.C9.4.description": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "considerations.P3.G8.C8.1.title": [
+          "str"
+        ],
+        "considerations.P3.G8.C8.1.description": [
+          "str"
+        ],
+        "considerations.P3.G8.C8.2.title": [
+          "str"
+        ],
+        "considerations.P3.G8.C8.2.description": [
+          "str"
+        ],
+        "considerations.P3.G8.C8.3.title": [
+          "str"
+        ],
+        "considerations.P3.G8.C8.3.description": [
+          "str"
+        ],
+        "considerations.P3.G8.C8.4.title": [
+          "str"
+        ],
+        "considerations.P3.G8.C8.4.description": [
+          "str"
+        ],
+        "considerations.P3.G8.C8.5.title": [
+          "str"
+        ],
+        "considerations.P3.G8.C8.5.description": [
+          "str"
+        ],
+        "considerations.P3.G7.C7.1.title": [
+          "str"
+        ],
+        "considerations.P3.G7.C7.1.description": [
+          "str"
+        ],
+        "considerations.P3.G7.C7.2.title": [
+          "str"
+        ],
+        "considerations.P3.G7.C7.2.description": [
+          "str"
+        ],
+        "considerations.P3.G7.C7.3.title": [
+          "str"
+        ],
+        "considerations.P3.G7.C7.3.description": [
+          "str"
+        ],
+        "considerations.P3.G7.C7.4.title": [
+          "str"
+        ],
+        "considerations.P3.G7.C7.4.description": [
+          "str"
+        ],
+        "considerations.P2.G6.C6.1.title": [
+          "str"
+        ],
+        "considerations.P2.G6.C6.1.description": [
+          "str"
+        ],
+        "considerations.P2.G6.C6.2.title": [
+          "str"
+        ],
+        "considerations.P2.G6.C6.2.description": [
+          "str"
+        ],
+        "considerations.P2.G6.C6.3.title": [
+          "str"
+        ],
+        "considerations.P2.G6.C6.3.description": [
+          "str"
+        ],
+        "considerations.P2.G6.C6.4.title": [
+          "str"
+        ],
+        "considerations.P2.G6.C6.4.description": [
+          "str"
+        ],
+        "considerations.P2.G6.C6.5.title": [
+          "str"
+        ],
+        "considerations.P2.G6.C6.5.description": [
+          "str"
+        ],
+        "considerations.P2.G5.C5.1.title": [
+          "str"
+        ],
+        "considerations.P2.G5.C5.1.description": [
+          "str"
+        ],
+        "considerations.P2.G5.C5.2.title": [
+          "str"
+        ],
+        "considerations.P2.G5.C5.2.description": [
+          "str"
+        ],
+        "considerations.P2.G5.C5.3.title": [
+          "str"
+        ],
+        "considerations.P2.G5.C5.3.description": [
+          "str"
+        ],
+        "considerations.P2.G5.C5.4.title": [
+          "str"
+        ],
+        "considerations.P2.G5.C5.4.description": [
+          "str"
+        ],
+        "considerations.P2.G4.C4.1.title": [
+          "str"
+        ],
+        "considerations.P2.G4.C4.1.description": [
+          "str"
+        ],
+        "considerations.P2.G4.C4.2.title": [
+          "str"
+        ],
+        "considerations.P2.G4.C4.2.description": [
+          "str"
+        ],
+        "considerations.P1.G3.C3.1.title": [
+          "str"
+        ],
+        "considerations.P1.G3.C3.1.description": [
+          "str"
+        ],
+        "considerations.P1.G3.C3.2.title": [
+          "str"
+        ],
+        "considerations.P1.G3.C3.2.description": [
+          "str"
+        ],
+        "considerations.P1.G3.C3.3.title": [
+          "str"
+        ],
+        "considerations.P1.G3.C3.3.description": [
+          "str"
+        ],
+        "considerations.P1.G3.C3.4.title": [
+          "str"
+        ],
+        "considerations.P1.G3.C3.4.description": [
+          "str"
+        ],
+        "considerations.P1.G2.C2.1.title": [
+          "str"
+        ],
+        "considerations.P1.G2.C2.1.description": [
+          "str"
+        ],
+        "considerations.P1.G2.C2.2.title": [
+          "str"
+        ],
+        "considerations.P1.G2.C2.2.description": [
+          "str"
+        ],
+        "considerations.P1.G2.C2.3.title": [
+          "str"
+        ],
+        "considerations.P1.G2.C2.3.description": [
+          "str"
+        ],
+        "considerations.P1.G2.C2.4.title": [
+          "str"
+        ],
+        "considerations.P1.G2.C2.4.description": [
+          "str"
+        ],
+        "considerations.P1.G2.C2.5.title": [
+          "str"
+        ],
+        "considerations.P1.G2.C2.5.description": [
+          "str"
+        ],
+        "considerations.P1.G1.C1.1.title": [
+          "str"
+        ],
+        "considerations.P1.G1.C1.1.description": [
+          "str"
+        ],
+        "considerations.P1.G1.C1.2.title": [
+          "str"
+        ],
+        "considerations.P1.G1.C1.2.description": [
+          "str"
+        ],
+        "considerations.P1.G1.C1.3.title": [
+          "str"
+        ],
+        "considerations.P1.G1.C1.3.description": [
+          "str"
+        ]
+      },
+      "sampled_documents": 9,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_district_configurations": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "created_by": [
+          "ObjectId"
+        ],
+        "lms_config": [
+          "list"
+        ],
+        "state_id": [
+          "ObjectId"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "updated_by": [
+          "ObjectId"
+        ]
+      },
+      "sampled_documents": 2,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_udl_chunks": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "grade": [
+          "str"
+        ],
+        "starts_at": [
+          "datetime"
+        ],
+        "ends_at": [
+          "datetime"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "parsed_results": [
+          "list"
+        ],
+        "summary": [
+          "str"
+        ]
+      },
+      "sampled_documents": 3,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_class_documents": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "gcs_path": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "class_lms_id": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "error_message": [
+          "NoneType"
+        ],
+        "file_id": [
+          "str"
+        ],
+        "name": [
+          "str"
+        ],
+        "processed_at": [
+          "NoneType"
+        ],
+        "processing_status": [
+          "str"
+        ],
+        "size": [
+          "int"
+        ],
+        "type": [
+          "str"
+        ],
+        "updated_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 10,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_class_tired_hqim_adoption_rate": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "class_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "school_id": [
+          "ObjectId"
+        ],
+        "score": [
+          "float"
+        ],
+        "adoption_tier": [
+          "str"
+        ],
+        "total_duration_days": [
+          "int"
+        ],
+        "calculation_period_start": [
+          "datetime"
+        ],
+        "calculation_period_end": [
+          "datetime"
+        ],
+        "created_at": [
+          "datetime"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_bda_chunks": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "grade": [
+          "str"
+        ],
+        "starts_at": [
+          "datetime"
+        ],
+        "ends_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "summaries": [
+          "str"
+        ],
+        "concept_id": [
+          "str"
+        ],
+        "parsed_results": [
+          "list"
+        ]
+      },
+      "sampled_documents": 30,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_district_subject_wise_analytics": {
+    "schema": {
+      "fields": {
+        "_id.district_id": [
+          "ObjectId"
+        ],
+        "new_enrollments": [
+          "int"
+        ],
+        "total_students": [
+          "int"
+        ],
+        "_id.subject.name": [
+          "str"
+        ],
+        "_id.subject.grades": [
+          "str"
+        ],
+        "average_percentage_score": [
+          "float"
+        ],
+        "max_possible_respondant_count": [
+          "int"
+        ],
+        "total_respondant_count": [
+          "int"
+        ]
+      },
+      "sampled_documents": 13,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_disitrict_lms_usage_analytics": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "active_teachers": [
+          "int"
+        ],
+        "modified_lessons": [
+          "int"
+        ],
+        "lesson_delivery.math": [
+          "int"
+        ]
+      },
+      "sampled_documents": 1,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_quizzes": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "lms_id": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId",
+          "str"
+        ],
+        "attachments": [
+          "list"
+        ],
+        "class.lms_id": [
+          "str"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "description": [
+          "str"
+        ],
+        "due_date": [
+          "NoneType",
+          "datetime"
+        ],
+        "duration_minutes": [
+          "int"
+        ],
+        "issued_at": [
+          "NoneType",
+          "datetime"
+        ],
+        "max_points": [
+          "float",
+          "int"
+        ],
+        "questions": [
+          "list"
+        ],
+        "title": [
+          "str"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "weightage": [
+          "float"
+        ],
+        "class.sis_id": [
+          "str"
+        ],
+        "class.id": [
+          "ObjectId"
+        ],
+        "sis_id": [
+          "str"
+        ],
+        "course.id": [
+          "ObjectId"
+        ],
+        "course.sis_id": [
+          "str"
+        ],
+        "school_id": [
+          "ObjectId"
+        ],
+        "subject.grades": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.id": [
+          "ObjectId"
+        ]
+      },
+      "sampled_documents": 1000,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "gold_class_performance": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "average_score": [
+          "float"
+        ],
+        "class_id": [
+          "ObjectId"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "performance.outstanding": [
+          "int"
+        ],
+        "performance.average": [
+          "int"
+        ],
+        "performance.needs_improvement": [
+          "int"
+        ],
+        "total_courses": [
+          "int"
+        ],
+        "total_students": [
+          "int"
+        ],
+        "performance.underperformance": [
+          "int"
+        ]
+      },
+      "sampled_documents": 543,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_districts": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "district_name": [
+          "str"
+        ],
+        "sis_id": [
+          "str"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "state_id": [
+          "ObjectId"
+        ],
+        "created_at": [
+          "datetime"
+        ],
+        "updated_at": [
+          "datetime"
+        ],
+        "lms_token.lms": [
+          "str"
+        ],
+        "lms_token.token": [
+          "str"
+        ],
+        "files_uploaded.academic_sessions": [
+          "list"
+        ],
+        "files_uploaded.classes": [
+          "list"
+        ],
+        "files_uploaded.courses": [
+          "list"
+        ],
+        "files_uploaded.enrollments": [
+          "list"
+        ],
+        "files_uploaded.orgs": [
+          "list"
+        ],
+        "files_uploaded.roles": [
+          "list"
+        ],
+        "files_uploaded.users": [
+          "list"
+        ],
+        "files_uploaded.quiz": [
+          "list"
+        ],
+        "files_uploaded.quiz_question": [
+          "list"
+        ],
+        "files_uploaded.quiz_responses": [
+          "list"
+        ],
+        "files_uploaded.quiz_submissions": [
+          "list"
+        ],
+        "files_uploaded.lesson_plan_mapping": [
+          "list"
+        ],
+        "files_uploaded.lesson_plan_upload": [
+          "list"
+        ],
+        "sso_idp.entity_id": [
+          "str"
+        ],
+        "sso_idp.single_sign_on_service_url": [
+          "str"
+        ],
+        "sso_idp.single_logout_service_ url": [
+          "str"
+        ],
+        "sso_idp.x509cert": [
+          "str"
+        ],
+        "sso_idp.attribute_mapping.email_id": [
+          "str"
+        ],
+        "sso_idp.attribute_mapping.group": [
+          "str"
+        ],
+        "sso_idp.xml_config_gcs_link": [
+          "str"
+        ],
+        "sso_type": [
+          "str"
+        ],
+        "lms_details.name": [
+          "str"
+        ],
+        "lms_details.link": [
+          "str"
+        ],
+        "sis_details.name": [
+          "str"
+        ],
+        "sis_details.link": [
+          "str"
+        ]
+      },
+      "sampled_documents": 2,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "master_courses": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "course_sis_id": [
+          "str"
+        ],
+        "district_id": [
+          "ObjectId"
+        ],
+        "academic_session.end_date": [
+          "NoneType",
+          "datetime"
+        ],
+        "academic_session.sis_id": [
+          "str"
+        ],
+        "academic_session.start_date": [
+          "NoneType",
+          "datetime"
+        ],
+        "course_code": [
+          "str"
+        ],
+        "course_title": [
+          "str"
+        ],
+        "org.sis_id": [
+          "str"
+        ],
+        "org.type": [
+          "str"
+        ],
+        "school.name": [
+          "str"
+        ],
+        "school.sis_id": [
+          "str"
+        ],
+        "subject.grades": [
+          "str"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "academic_session.id": [
+          "ObjectId"
+        ],
+        "is_active": [
+          "bool"
+        ],
+        "org.id": [
+          "ObjectId"
+        ],
+        "school.id": [
+          "ObjectId"
+        ],
+        "state_id": [
+          "ObjectId"
+        ],
+        "subject.id": [
+          "ObjectId"
+        ]
+      },
+      "sampled_documents": 434,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  },
+  "silver_state_standards_alignment": {
+    "schema": {
+      "fields": {
+        "_id": [
+          "ObjectId"
+        ],
+        "state.id": [
+          "ObjectId"
+        ],
+        "state.name": [
+          "str"
+        ],
+        "districts": [
+          "list"
+        ],
+        "subject.name": [
+          "str"
+        ],
+        "subject.grade": [
+          "str"
+        ],
+        "course.id": [
+          "ObjectId"
+        ],
+        "course.course_title": [
+          "str"
+        ],
+        "textbook.name": [
+          "str"
+        ],
+        "textbook.edition": [
+          "str"
+        ],
+        "textbook.publisher": [
+          "str"
+        ],
+        "unit": [
+          "str"
+        ],
+        "module": [
+          "str"
+        ],
+        "lesson": [
+          "str"
+        ],
+        "alignment_score": [
+          "float",
+          "int"
+        ],
+        "status": [
+          "str"
+        ],
+        "standards.MGSE5.NF.7.description": [
+          "str"
+        ],
+        "standards.MGSE5.NF.7.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NF.7.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NBT.7.description": [
+          "str"
+        ],
+        "standards.MGSE5.NBT.7.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NBT.7.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NBT.6.description": [
+          "str"
+        ],
+        "standards.MGSE5.NBT.6.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NBT.6.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.OA.2.description": [
+          "str"
+        ],
+        "standards.MGSE5.OA.2.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.OA.2.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NF.5.description": [
+          "str"
+        ],
+        "standards.MGSE5.NF.5.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NF.5.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.OA.1.description": [
+          "str"
+        ],
+        "standards.MGSE5.OA.1.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.OA.1.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.OA.5.description": [
+          "str"
+        ],
+        "standards.MGSE5.OA.5.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.OA.5.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.OA.3.description": [
+          "str"
+        ],
+        "standards.MGSE5.OA.3.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.OA.3.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.OA.4.description": [
+          "str"
+        ],
+        "standards.MGSE5.OA.4.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.OA.4.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.MD.2.description": [
+          "str"
+        ],
+        "standards.MGSE5.MD.2.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.MD.2.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.MD.3.description": [
+          "str"
+        ],
+        "standards.MGSE5.MD.3.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.MD.3.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NF.4.description": [
+          "str"
+        ],
+        "standards.MGSE5.NF.4.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NF.4.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.MD.4.description": [
+          "str"
+        ],
+        "standards.MGSE5.MD.4.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.MD.4.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NBT.5.description": [
+          "str"
+        ],
+        "standards.MGSE5.NBT.5.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NBT.5.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NF.6.description": [
+          "str"
+        ],
+        "standards.MGSE5.NF.6.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NF.6.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.MD.5.description": [
+          "str"
+        ],
+        "standards.MGSE5.MD.5.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.MD.5.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NBT.1.description": [
+          "str"
+        ],
+        "standards.MGSE5.NBT.1.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NBT.1.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NBT.2.description": [
+          "str"
+        ],
+        "standards.MGSE5.NBT.2.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NBT.2.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NBT.3.description": [
+          "str"
+        ],
+        "standards.MGSE5.NBT.3.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NBT.3.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NBT.8.description": [
+          "str"
+        ],
+        "standards.MGSE5.NBT.8.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NBT.8.is_gap": [
+          "bool"
+        ],
+        "standards.MGSE5.NBT.4.description": [
+          "str"
+        ],
+        "standards.MGSE5.NBT.4.alignment_score": [
+          "float"
+        ],
+        "standards.MGSE5.NBT.4.is_gap": [
+          "bool"
+        ]
+      },
+      "sampled_documents": 16,
+      "mode": "latest_data"
+    },
+    "indexes": [
+      {
+        "name": "_id_",
+        "key": {
+          "_id": 1
+        },
+        "unique": false,
+        "sparse": false,
+        "ttl": null,
+        "partialFilterExpression": null
+      }
+    ]
+  }
+}

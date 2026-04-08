@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  mongo-schema-governor:
+    build: .
+    container_name: mongo-schema-governor
+
+    env_file:
+      - .env
+
+    volumes:
+      - ./output:/app/output
